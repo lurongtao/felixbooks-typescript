@@ -1,0 +1,808 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>基础类型 · 千锋大前端小册-TypeScript</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="古艺散人">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="functions.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    
+        <link rel="shortcut icon" href='../source/images/favicon.jpg' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../source/images/favicon.jpg' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='../source/images/apple-touch-icon.jpg'>
+    
+    
+        
+        <link rel="apple-touch-icon" sizes="120x120" href="../source/images/apple-touch-icon.jpg">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="../source/images/apple-touch-icon.jpg">
+        
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"lurongtao","repo":"felixbooks-typescript","type":"star","size":"small","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../introduction/README.md">
+            
+                <span>
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../introduction/what-is-typescript.html">
+            
+                <a href="../introduction/what-is-typescript.html">
+            
+                    
+                    什么是 TypeScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../introduction/get-typescript.html">
+            
+                <a href="../introduction/get-typescript.html">
+            
+                    
+                    安装 TypeScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../introduction/hello-typescript.html">
+            
+                <a href="../introduction/hello-typescript.html">
+            
+                    
+                    5分钟了解 TypeScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.3.1" data-path="basic-types.html">
+            
+                <a href="basic-types.html">
+            
+                    
+                    基础类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="functions.html">
+            
+                <a href="functions.html">
+            
+                    
+                    函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="interfaces.html">
+            
+                <a href="interfaces.html">
+            
+                    
+                    接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="classes.html">
+            
+                <a href="classes.html">
+            
+                    
+                    类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="class-and-interfaces.html">
+            
+                <a href="class-and-interfaces.html">
+            
+                    
+                    类和接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="generics.html">
+            
+                <a href="generics.html">
+            
+                    
+                    泛型
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../advanced/">
+            
+                <a href="../advanced/">
+            
+                    
+                    进阶
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../advanced/basic-types.html">
+            
+                <a href="../advanced/basic-types.html">
+            
+                    
+                    基础类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../advanced/variable-declarations.html">
+            
+                <a href="../advanced/variable-declarations.html">
+            
+                    
+                    变量声明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="enums.md">
+            
+                <span>
+            
+                    
+                    枚举
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="type-inference.md">
+            
+                <span>
+            
+                    
+                    类型推论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="type-compatibility.md">
+            
+                <span>
+            
+                    
+                    类型兼容性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="advanced-types.md">
+            
+                <span>
+            
+                    
+                    高级类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="symbols.md">
+            
+                <span>
+            
+                    
+                    Symbols
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="iterators-and-generators.md">
+            
+                <span>
+            
+                    
+                    迭代器和生成器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="modules.md">
+            
+                <span>
+            
+                    
+                    模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="namespaces.md">
+            
+                <span>
+            
+                    
+                    命名空间
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="namespaces-and-modules.md">
+            
+                <span>
+            
+                    
+                    命名空间和模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.12" data-path="module-resolution.md">
+            
+                <span>
+            
+                    
+                    模块解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.13" data-path="declaration-merging.md">
+            
+                <span>
+            
+                    
+                    声明合并
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.14" data-path="jsx.md">
+            
+                <span>
+            
+                    
+                    JSX
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.15" data-path="decorators.md">
+            
+                <span>
+            
+                    
+                    装饰器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.16" data-path="mixins.md">
+            
+                <span>
+            
+                    
+                    Mixins
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.17" data-path="type-slash-directives.md">
+            
+                <span>
+            
+                    
+                    三斜线指令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.18" data-path="type-checking-javascript-files.md">
+            
+                <span>
+            
+                    
+                    JavaScript类型检查
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.19" data-path="utility-types.md">
+            
+                <span>
+            
+                    
+                    工具类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../engineering/README.md">
+            
+                <span>
+            
+                    
+                    声明文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../thanks/README.md">
+            
+                <span>
+            
+                    
+                    感谢
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >基础类型</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x57FA;&#x7840;&#x7C7B;&#x578B;-&#x5165;&#x95E8;"><b></b>&#x57FA;&#x7840;&#x7C7B;&#x578B;-&#x5165;&#x95E8;</a></li><ul><li><span class="title-icon "></span><a href="#&#x4ECB;&#x7ECD;"><b></b>&#x4ECB;&#x7ECD;</a></li><li><span class="title-icon "></span><a href="#&#x5E03;&#x5C14;&#x503C;"><b></b>&#x5E03;&#x5C14;&#x503C;</a></li><li><span class="title-icon "></span><a href="#&#x6570;&#x5B57;"><b></b>&#x6570;&#x5B57;</a></li><li><span class="title-icon "></span><a href="#&#x5B57;&#x7B26;&#x4E32;"><b></b>&#x5B57;&#x7B26;&#x4E32;</a></li><li><span class="title-icon "></span><a href="#&#x6570;&#x7EC4;"><b></b>&#x6570;&#x7EC4;</a></li><li><span class="title-icon "></span><a href="#&#x5143;&#x7EC4;-tuple"><b></b>&#x5143;&#x7EC4; Tuple</a></li><li><span class="title-icon "></span><a href="#&#x679A;&#x4E3E;"><b></b>&#x679A;&#x4E3E;</a></li><li><span class="title-icon "></span><a href="#any"><b></b>any</a></li><li><span class="title-icon "></span><a href="#void"><b></b>void</a></li></ul></ul></div><a href="#&#x57FA;&#x7840;&#x7C7B;&#x578B;-&#x5165;&#x95E8;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x57FA;&#x7840;&#x7C7B;&#x578B;-&#x5165;&#x95E8;"><a name="&#x57FA;&#x7840;&#x7C7B;&#x578B;-&#x5165;&#x95E8;" class="anchor-navigation-ex-anchor" href="#&#x57FA;&#x7840;&#x7C7B;&#x578B;-&#x5165;&#x95E8;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x57FA;&#x7840;&#x7C7B;&#x578B;-&#x5165;&#x95E8;" class="plugin-anchor" href="#&#x57FA;&#x7840;&#x7C7B;&#x578B;-&#x5165;&#x95E8;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x57FA;&#x7840;&#x7C7B;&#x578B;-&#x5165;&#x95E8;</h1>
+<h2 id="&#x4ECB;&#x7ECD;"><a name="&#x4ECB;&#x7ECD;" class="anchor-navigation-ex-anchor" href="#&#x4ECB;&#x7ECD;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x4ECB;&#x7ECD;" class="plugin-anchor" href="#&#x4ECB;&#x7ECD;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4ECB;&#x7ECD;</h2>
+<p>TypeScript&#x5305;&#x542B;&#x7684;&#x6700;&#x7B80;&#x5355;&#x7684;&#x6570;&#x636E;&#x5355;&#x5143;&#x6709;&#xFF1A;&#x6570;&#x5B57;&#xFF0C;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5E03;&#x5C14;&#x503C;&#xFF0C;Null &#x548C; Undefined&#x7B49;&#x3002;TypeScript&#x652F;&#x6301;&#x4E0E;JavaScript&#x51E0;&#x4E4E;&#x76F8;&#x540C;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF0C;&#x6B64;&#x5916;&#x8FD8;&#x63D0;&#x4F9B;&#x4E86;&#x5B9E;&#x7528;&#x7684;&#x679A;&#x4E3E;&#x7C7B;&#x578B;&#x65B9;&#x4FBF;&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x3002;&#x672C;&#x8282;&#x4ECB;&#x7ECD;&#x57FA;&#x7840;&#x7C7B;&#x578B;&#x7684;&#x5E03;&#x5C14;&#x503C;&#x3001;&#x6570;&#x5B57;&#x3001;&#x5B57;&#x7B26;&#x4E32;&#x3001;&#x6570;&#x7EC4;&#x3001;&#x5143;&#x7EC4;&#x3001;&#x679A;&#x4E3E;&#x3001;any &#x548C; void &#x7B49;&#xFF0C;&#x5176;&#x4ED6;&#x51E0;&#x79CD;&#x57FA;&#x7840;&#x7C7B;&#x578B;&#x8BE6;&#x89C1; <a href="../advanced/basic-types.html">&#x57FA;&#x7840;&#x7C7B;&#x578B;-&#x9AD8;&#x7EA7;</a>&#x3002;</p>
+<h2 id="&#x5E03;&#x5C14;&#x503C;"><a name="&#x5E03;&#x5C14;&#x503C;" class="anchor-navigation-ex-anchor" href="#&#x5E03;&#x5C14;&#x503C;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5E03;&#x5C14;&#x503C;" class="plugin-anchor" href="#&#x5E03;&#x5C14;&#x503C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5E03;&#x5C14;&#x503C;</h2>
+<p>&#x6700;&#x57FA;&#x672C;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x5C31;&#x662F;&#x7B80;&#x5355;&#x7684;<code>true/false</code>&#x503C;&#xFF0C;&#x5728;JavaScript&#x548C;TypeScript&#x91CC;&#x53EB;&#x505A;<code>boolean</code>&#x3002;</p>
+<pre><code>let isDone: boolean = false
+</code></pre><h2 id="&#x6570;&#x5B57;"><a name="&#x6570;&#x5B57;" class="anchor-navigation-ex-anchor" href="#&#x6570;&#x5B57;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x6570;&#x5B57;" class="plugin-anchor" href="#&#x6570;&#x5B57;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6570;&#x5B57;</h2>
+<p>&#x548C;JavaScript&#x4E00;&#x6837;&#xFF0C;TypeScript&#x91CC;&#x7684;&#x6240;&#x6709;&#x6570;&#x5B57;&#x90FD;&#x662F;&#x6D6E;&#x70B9;&#x6570;&#x3002; &#x8FD9;&#x4E9B;&#x6D6E;&#x70B9;&#x6570;&#x7684;&#x7C7B;&#x578B;&#x662F;<code>number</code>&#x3002; </p>
+<pre><code>let decLiteral: number = 6
+</code></pre><h2 id="&#x5B57;&#x7B26;&#x4E32;"><a name="&#x5B57;&#x7B26;&#x4E32;" class="anchor-navigation-ex-anchor" href="#&#x5B57;&#x7B26;&#x4E32;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5B57;&#x7B26;&#x4E32;" class="plugin-anchor" href="#&#x5B57;&#x7B26;&#x4E32;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B57;&#x7B26;&#x4E32;</h2>
+<p>TypeScript&#x50CF;&#x5176;&#x5B83;&#x8BED;&#x8A00;&#x91CC;&#x4E00;&#x6837;&#xFF0C;&#x4F7F;&#x7528;<code>string</code>&#x8868;&#x793A;&#x6587;&#x672C;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x3002; &#x548C;JavaScript&#x4E00;&#x6837;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x53CC;&#x5F15;&#x53F7;&#xFF08;&quot;&#xFF09;&#x6216;&#x5355;&#x5F15;&#x53F7;&#xFF08;&apos;&#xFF09;&#x8868;&#x793A;&#x5B57;&#x7B26;&#x4E32;&#x3002;</p>
+<pre><code>let from: string = &quot;&#x5343;&#x950B;&#x6559;&#x80B2;&quot;
+from = &quot;&#x597D;&#x7A0B;&#x5E8F;&#x5458;&quot;
+</code></pre><p>&#x4E5F;&#x4F7F;&#x7528;&#x6A21;&#x7248;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5B9A;&#x4E49;&#x591A;&#x884C;&#x6587;&#x672C;&#x548C;&#x5185;&#x5D4C;&#x8868;&#x8FBE;&#x5F0F;&#x3002; &#x8FD9;&#x79CD;&#x5B57;&#x7B26;&#x4E32;&#x662F;&#x88AB;&#x53CD;&#x5F15;&#x53F7;&#x5305;&#x56F4;&#xFF08;`&#xFF09;&#xFF0C;&#x5E76;&#x4E14;&#x4EE5;${ expr }&#x8FD9;&#x79CD;&#x5F62;&#x5F0F;&#x5D4C;&#x5165;&#x8868;&#x8FBE;&#x5F0F;&#x3002;</p>
+<pre><code>let surname: string = `Felix`
+let age: number = 37
+let sentence: string = `Hello, my name is ${ surname }.
+
+I&apos;ll be ${ age + 1 } years old next month.`
+</code></pre><h2 id="&#x6570;&#x7EC4;"><a name="&#x6570;&#x7EC4;" class="anchor-navigation-ex-anchor" href="#&#x6570;&#x7EC4;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x6570;&#x7EC4;" class="plugin-anchor" href="#&#x6570;&#x7EC4;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6570;&#x7EC4;</h2>
+<p>TypeScript&#x50CF;JavaScript&#x4E00;&#x6837;&#x53EF;&#x4EE5;&#x64CD;&#x4F5C;&#x6570;&#x7EC4;&#x5143;&#x7D20;&#x3002; &#x6709;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x6570;&#x7EC4;&#x3002; &#x7B2C;&#x4E00;&#x79CD;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x5143;&#x7D20;&#x7C7B;&#x578B;&#x540E;&#x9762;&#x63A5;&#x4E0A; <code>[]</code>&#xFF0C;&#x8868;&#x793A;&#x7531;&#x6B64;&#x7C7B;&#x578B;&#x5143;&#x7D20;&#x7EC4;&#x6210;&#x7684;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF1A;</p>
+<pre><code>let list: number[] = [1, 2, 3]
+</code></pre><p>&#x7B2C;&#x4E8C;&#x79CD;&#x65B9;&#x5F0F;&#x662F;&#x4F7F;&#x7528;&#x6570;&#x7EC4;&#x6CDB;&#x578B;&#xFF0C;Array&lt;&#x5143;&#x7D20;&#x7C7B;&#x578B;&gt;&#xFF1A;</p>
+<pre><code>let list: Array&lt;number&gt; = [1, 2, 3]
+</code></pre><h2 id="&#x5143;&#x7EC4;-tuple"><a name="&#x5143;&#x7EC4;-tuple" class="anchor-navigation-ex-anchor" href="#&#x5143;&#x7EC4;-tuple"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5143;&#x7EC4;-tuple" class="plugin-anchor" href="#&#x5143;&#x7EC4;-tuple"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5143;&#x7EC4; Tuple</h2>
+<p>&#x5143;&#x7EC4;&#x7C7B;&#x578B;&#x5141;&#x8BB8;&#x8868;&#x793A;&#x4E00;&#x4E2A;&#x5DF2;&#x77E5;&#x5143;&#x7D20;&#x6570;&#x91CF;&#x548C;&#x7C7B;&#x578B;&#x7684;&#x6570;&#x7EC4;&#xFF0C;&#x5404;&#x5143;&#x7D20;&#x7684;&#x7C7B;&#x578B;&#x4E0D;&#x5FC5;&#x76F8;&#x540C;&#x3002; &#x6BD4;&#x5982;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x4E00;&#x5BF9;&#x503C;&#x5206;&#x522B;&#x4E3A; string&#x548C;number&#x7C7B;&#x578B;&#x7684;&#x5143;&#x7EC4;&#x3002;</p>
+<pre><code>// &#x58F0;&#x660E;&#x4E00;&#x4E2A;&#x5143;&#x7EC4;&#x7C7B;&#x578B; x
+let x: [string, number]
+// &#x521D;&#x59CB;&#x5316; x
+x = [&apos;hello&apos;, 10] // OK
+// &#x65E0;&#x6548;&#x7684;&#x521D;&#x59CB;&#x503C;
+x = [10, &apos;hello&apos;] // Error
+</code></pre><p>&#x5F53;&#x8BBF;&#x95EE;&#x4E00;&#x4E2A;&#x5DF2;&#x77E5;&#x7D22;&#x5F15;&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x4F1A;&#x5F97;&#x5230;&#x6B63;&#x786E;&#x7684;&#x7C7B;&#x578B;&#xFF1A;</p>
+<pre><code>console.log(x[0].substr(1)) // OK
+console.log(x[1].substr(1)) // Error, &apos;number&apos; &#x4E0D;&#x5B58;&#x5728; &apos;substr&apos; &#x65B9;&#x6CD5;
+</code></pre><p>&#x5F53;&#x8BBF;&#x95EE;&#x4E00;&#x4E2A;&#x8D8A;&#x754C;&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x4F1A;&#x51FA;&#x73B0;&#x9519;&#x8BEF;&#xFF1A;</p>
+<pre><code>x[3] = &quot;world&quot; // Error, &apos;[string, number]&apos; &#x672A;&#x5B9A;&#x4E49;&#x7B2C; 3 &#x4E2A;&#x5143;&#x7D20;&#x7684;&#x7C7B;&#x578B;.
+console.log(x[5].toString()) // Error, &apos;[string, number]&apos; &#x672A;&#x5B9A;&#x4E49;&#x7B2C; 5 &#x4E2A;&#x5143;&#x7D20;&#x7684;&#x7C7B;&#x578B;.
+</code></pre><h2 id="&#x679A;&#x4E3E;"><a name="&#x679A;&#x4E3E;" class="anchor-navigation-ex-anchor" href="#&#x679A;&#x4E3E;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x679A;&#x4E3E;" class="plugin-anchor" href="#&#x679A;&#x4E3E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x679A;&#x4E3E;</h2>
+<p>enum&#x7C7B;&#x578B;&#x662F;&#x5BF9;JavaScript&#x6807;&#x51C6;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x7684;&#x4E00;&#x4E2A;&#x8865;&#x5145;&#x3002; &#x4F7F;&#x7528;&#x679A;&#x4E3E;&#x7C7B;&#x578B;&#x53EF;&#x4EE5;&#x4E3A;&#x4E00;&#x7EC4;&#x6570;&#x503C;&#x8D4B;&#x4E88;&#x53CB;&#x597D;&#x7684;&#x540D;&#x5B57;&#x3002;</p>
+<pre><code>enum Color {Red, Green, Blue}
+let c: Color = Color.Green
+</code></pre><p>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4ECE; 0 &#x5F00;&#x59CB;&#x4E3A;&#x5143;&#x7D20;&#x7F16;&#x53F7;&#x3002; &#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x624B;&#x52A8;&#x7684;&#x6307;&#x5B9A;&#x6210;&#x5458;&#x7684;&#x6570;&#x503C;&#x3002; &#x4F8B;&#x5982;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x4E0A;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x6539;&#x6210;&#x4ECE; 1 &#x5F00;&#x59CB;&#x7F16;&#x53F7;&#xFF1A;</p>
+<pre><code>enum Color {Red = 1, Green, Blue}
+let c: Color = Color.Green
+</code></pre><p>&#x6216;&#x8005;&#xFF0C;&#x5168;&#x90E8;&#x90FD;&#x91C7;&#x7528;&#x624B;&#x52A8;&#x8D4B;&#x503C;&#xFF1A;</p>
+<pre><code>enum Color {Red = 1, Green = 2, Blue = 4}
+let c: Color = Color.Green
+</code></pre><p>&#x679A;&#x4E3E;&#x7C7B;&#x578B;&#x63D0;&#x4F9B;&#x7684;&#x4E00;&#x4E2A;&#x4FBF;&#x5229;&#x662F;&#x4F60;&#x53EF;&#x4EE5;&#x7531;&#x679A;&#x4E3E;&#x7684;&#x503C;&#x5F97;&#x5230;&#x5B83;&#x7684;&#x540D;&#x5B57;&#x3002; &#x4F8B;&#x5982;&#xFF0C;&#x6211;&#x4EEC;&#x77E5;&#x9053;&#x6570;&#x503C;&#x4E3A;2&#xFF0C;&#x4F46;&#x662F;&#x4E0D;&#x786E;&#x5B9A;&#x5B83;&#x6620;&#x5C04;&#x5230;Color&#x91CC;&#x7684;&#x54EA;&#x4E2A;&#x540D;&#x5B57;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x67E5;&#x627E;&#x76F8;&#x5E94;&#x7684;&#x540D;&#x5B57;&#xFF1A;</p>
+<pre><code>enum Color {Red = 1, Green, Blue}
+let colorName: string = Color[2]
+console.log(colorName)  // &apos;Green&apos;
+</code></pre><h2 id="any"><a name="any" class="anchor-navigation-ex-anchor" href="#any"><i class="fa fa-link" aria-hidden="true"></i></a><a name="any" class="plugin-anchor" href="#any"><i class="fa fa-link" aria-hidden="true"></i></a>any</h2>
+<p>&#x6709;&#x65F6;&#x5019;&#xFF0C;&#x6211;&#x4EEC;&#x4F1A;&#x60F3;&#x8981;&#x4E3A;&#x90A3;&#x4E9B;&#x5728;&#x7F16;&#x7A0B;&#x9636;&#x6BB5;&#x8FD8;&#x4E0D;&#x6E05;&#x695A;&#x7C7B;&#x578B;&#x7684;&#x53D8;&#x91CF;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x7C7B;&#x578B;&#x3002; &#x8FD9;&#x4E9B;&#x503C;&#x53EF;&#x80FD;&#x6765;&#x81EA;&#x4E8E;&#x52A8;&#x6001;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x6BD4;&#x5982;&#x6765;&#x81EA;&#x7528;&#x6237;&#x8F93;&#x5165;&#x6216;&#x7B2C;&#x4E09;&#x65B9;&#x4EE3;&#x7801;&#x5E93;&#x3002; &#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x6211;&#x4EEC;&#x4E0D;&#x5E0C;&#x671B;&#x7C7B;&#x578B;&#x68C0;&#x67E5;&#x5668;&#x5BF9;&#x8FD9;&#x4E9B;&#x503C;&#x8FDB;&#x884C;&#x68C0;&#x67E5;&#x800C;&#x662F;&#x76F4;&#x63A5;&#x8BA9;&#x5B83;&#x4EEC;&#x901A;&#x8FC7;&#x7F16;&#x8BD1;&#x9636;&#x6BB5;&#x7684;&#x68C0;&#x67E5;&#x3002; &#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>any</code>&#x7C7B;&#x578B;&#x6765;&#x6807;&#x8BB0;&#x8FD9;&#x4E9B;&#x53D8;&#x91CF;&#xFF1A;</p>
+<pre><code>let notSure: any = 4
+notSure = &quot;maybe a string instead&quot; // OK &#x8D4B;&#x503C;&#x4E86;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;
+notSure = false // OK &#x8D4B;&#x503C;&#x4E86;&#x4E00;&#x4E2A;&#x5E03;&#x5C14;&#x503C;
+</code></pre><p>&#x5728;&#x5BF9;&#x73B0;&#x6709;&#x4EE3;&#x7801;&#x8FDB;&#x884C;&#x6539;&#x5199;&#x7684;&#x65F6;&#x5019;&#xFF0C;<code>any</code> &#x7C7B;&#x578B;&#x662F;&#x5341;&#x5206;&#x6709;&#x7528;&#x7684;&#xFF0C;&#x5B83;&#x5141;&#x8BB8;&#x4F60;&#x5728;&#x7F16;&#x8BD1;&#x65F6;&#x53EF;&#x9009;&#x62E9;&#x5730;&#x5305;&#x542B;&#x6216;&#x79FB;&#x9664;&#x7C7B;&#x578B;&#x68C0;&#x67E5;&#x3002;</p>
+<pre><code>let notSure: any = 4
+notSure.ifItExists() // okay, ifItExists&#x51FD;&#x6570;&#x5728;&#x8FD0;&#x884C;&#x65F6;&#x53EF;&#x80FD;&#x5B58;&#x5728;
+notSure.toFixed() // okay, toFixed &#x51FD;&#x6570;&#x5B58;&#x5728; (&#x5728;&#x7F16;&#x8BD1;&#x65F6;&#x4E0D;&#x505A;&#x68C0;&#x67E5;)
+</code></pre><p>&#x5F53;&#x4F60;&#x53EA;&#x77E5;&#x9053;&#x4E00;&#x90E8;&#x5206;&#x6570;&#x636E;&#x7684;&#x7C7B;&#x578B;&#x65F6;&#xFF0C;<code>any</code> &#x7C7B;&#x578B;&#x4E5F;&#x662F;&#x6709;&#x7528;&#x7684;&#x3002; &#x6BD4;&#x5982;&#xFF0C;&#x4F60;&#x6709;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x5B83;&#x5305;&#x542B;&#x4E86;&#x4E0D;&#x540C;&#x7684;&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;&#xFF1A;</p>
+<pre><code>let list: any[] = [1, true, &quot;free&quot;]
+list[1] = 100
+</code></pre><h2 id="void"><a name="void" class="anchor-navigation-ex-anchor" href="#void"><i class="fa fa-link" aria-hidden="true"></i></a><a name="void" class="plugin-anchor" href="#void"><i class="fa fa-link" aria-hidden="true"></i></a>void</h2>
+<p>&#x67D0;&#x79CD;&#x7A0B;&#x5EA6;&#x4E0A;&#x6765;&#x8BF4;&#xFF0C;<code>void</code>&#x7C7B;&#x578B;&#x50CF;&#x662F;&#x4E0E;<code>any</code>&#x7C7B;&#x578B;&#x76F8;&#x53CD;&#xFF0C;&#x5B83;&#x8868;&#x793A;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x7C7B;&#x578B;&#x3002; &#x5F53;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x6CA1;&#x6709;&#x8FD4;&#x56DE;&#x503C;&#x65F6;&#xFF0C;&#x4F60;&#x901A;&#x5E38;&#x4F1A;&#x89C1;&#x5230;&#x5176;&#x8FD4;&#x56DE;&#x503C;&#x7C7B;&#x578B;&#x662F; <code>void</code>&#xFF1A;</p>
+<pre><code>function echo(): void {
+  console.log(&apos;&#x505A;&#x771F;&#x5B9E;&#x7684;&#x81EA;&#x5DF1;&#xFF0C;&#x7528;&#x826F;&#x5FC3;&#x505A;&#x6559;&#x80B2;&apos;)
+}
+</code></pre><p>&#x58F0;&#x660E;&#x4E00;&#x4E2A;void&#x7C7B;&#x578B;&#x7684;&#x53D8;&#x91CF;&#x6CA1;&#x6709;&#x4EC0;&#x4E48;&#x5927;&#x7528;&#xFF0C;&#x56E0;&#x4E3A;&#x4F60;&#x53EA;&#x80FD;&#x4E3A;&#x5B83;&#x8D4B;&#x4E88;undefined&#x548C;null&#xFF1A;</p>
+<pre><code>let unusable: void = undefined
+let greeting: void = &apos;hello world&apos; // void &#x7C7B;&#x578B;&#x4E0D;&#x80FD;&#x8D4B;&#x503C;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 基础">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="functions.html" class="navigation navigation-next " aria-label="Next page: 函数">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"基础类型","level":"1.3.1","depth":2,"next":{"title":"函数","level":"1.3.2","depth":2,"path":"basics/functions.md","ref":"basics/functions.md","articles":[]},"previous":{"title":"基础","level":"1.3","depth":1,"path":"basics/README.md","ref":"basics/README.md","articles":[{"title":"基础类型","level":"1.3.1","depth":2,"path":"basics/basic-types.md","ref":"basics/basic-types.md","articles":[]},{"title":"函数","level":"1.3.2","depth":2,"path":"basics/functions.md","ref":"basics/functions.md","articles":[]},{"title":"接口","level":"1.3.3","depth":2,"path":"basics/interfaces.md","ref":"basics/interfaces.md","articles":[]},{"title":"类","level":"1.3.4","depth":2,"path":"basics/classes.md","ref":"basics/classes.md","articles":[]},{"title":"类和接口","level":"1.3.5","depth":2,"path":"basics/class-and-interfaces.md","ref":"basics/class-and-interfaces.md","articles":[]},{"title":"泛型","level":"1.3.6","depth":2,"path":"basics/generics.md","ref":"basics/generics.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","expandable-chapters-small","anchors","github","github-buttons","donate","sharing-plus","anchor-navigation-ex","favicon"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"github":{"url":"https://github.com/lurongtao/felixbooks-typescript"},"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"./source/images/donate.png","alipayText":" ","button":"赞赏","title":"","wechat":"","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"./source/images/favicon.jpg","bookmark":"./source/images/favicon.jpg","appleTouch":"./source/images/apple-touch-icon.jpg","appleTouchMore":{"120x120":"./source/images/apple-touch-icon.jpg","180x180":"./source/images/apple-touch-icon.jpg"}},"github-buttons":{"buttons":[{"user":"lurongtao","repo":"felixbooks-typescript","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"sharing":{"qq":false,"all":["google","facebook","weibo","twitter","qq","qzone","linkedin","pocket"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"古艺散人","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"千锋大前端小册-TypeScript","language":"zh-hans","links":{},"gitbook":"3.2.3","description":"TypeScript 入门教程"},"file":{"path":"basics/basic-types.md","mtime":"2020-02-09T14:08:36.792Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-09T15:33:06.074Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
