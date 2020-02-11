@@ -23,8 +23,8 @@ function f() {
 function f() {
   var a = 10
   return function g() {
- var b = a + 1
- return b
+    var b = a + 1
+    return b
   }
 }
 var g = f()
@@ -44,7 +44,7 @@ function f() {
   return b
 
   function g() {
- return a
+    return a
   }
 }
 
@@ -56,7 +56,7 @@ f() // returns 2
 ```
 function f(shouldInitialize: boolean) {
   if (shouldInitialize) {
- var x = 10
+    var x = 10
   }
   return x
 }
@@ -70,13 +70,12 @@ f(false) // returns 'undefined'
 ```
 function sumMatrix(matrix: number[][]) {
   var sum = 0
-  for (var i = 0 i < matrix.length i++) {
- var currentRow = matrix[i]
- for (var i = 0 i < currentRow.length i++) {
-   sum += currentRow[i]
- }
+  for (var i = 0; i < matrix.length; i++) {
+    var currentRow = matrix[i]
+    for (var i = 0; i < currentRow.length; i++) {
+      sum += currentRow[i]
+    }
   }
-
   return sum
 }
 ```
@@ -85,7 +84,7 @@ function sumMatrix(matrix: number[][]) {
 ### 捕获变量怪异之处
 快速的猜一下下面的代码会返回什么：
 ```
-for (var i = 0 i < 10 i++) {
+for (var i = 0; i < 10; i++) {
   setTimeout(function() { console.log(i) }, 100 * i)
 }
 ```
@@ -129,7 +128,7 @@ for (var i = 0 i < 10 i++) {
   // 捕获当前i的状态
   // 应用当前的值作为参数来执行函数
   (function(i) {
- setTimeout(function() { console.log(i) }, 100 * i)
+    setTimeout(function() { console.log(i) }, 100 * i)
   })(i)
 }
 ```
@@ -148,9 +147,9 @@ function f(input: boolean) {
   let a = 100
 
   if (input) {
- // 这里仍然可以引用a
- let b = a + 1
- return b
+    // 这里仍然可以引用a
+    let b = a + 1
+    return b
   }
 
   // 报错: 'b' 在这里不存在
@@ -185,7 +184,7 @@ function f(x) {
   var x
 
   if (true) {
- var x
+    var x
   }
 }
 ```
@@ -210,8 +209,8 @@ function g() {
 ```
 function f(condition, x) {
   if (condition) {
- let x = 100
- return x
+    let x = 100
+    return x
   }
 
   return x
@@ -225,12 +224,11 @@ f(true, 0)  // returns 100
 function sumMatrix(matrix: number[][]) {
   let sum = 0
   for (let i = 0 i < matrix.length i++) {
- var currentRow = matrix[i]
- for (let i = 0 i < currentRow.length i++) {
-   sum += currentRow[i]
- }
+    var currentRow = matrix[i]
+    for (let i = 0 i < currentRow.length i++) {
+      sum += currentRow[i]
+    }
   }
-
   return sum
 }
 ```
@@ -242,12 +240,11 @@ function sumMatrix(matrix: number[][]) {
 ```
 function theCityThatAlwaysSleeps() {
   let getCity
-
   if (true) {
- let city = "Seattle"
- getCity = function() {
-   return city
- }
+    let city = "Seattle"
+    getCity = function() {
+      return city
+    }
   }
 
   return getCity()
@@ -392,10 +389,11 @@ let {a, b}: {a: string, b: number} = o
 
 ***默认值***
 默认值可以让你在属性为 undefined 时使用缺省值：
-
+```
 function keepWholeObject(wholeObject: { a: string, b?: number }) {
   let { a, b = 1001 } = wholeObject
 }
+```
 现在，即使 b 为 undefined，keepWholeObject 函数的变量 wholeObject 的属性 a 和 b 都会有值。
 
 ### 函数声明

@@ -32,6 +32,10 @@
   - [三斜线指令](basics/type-slash-directives.md)
   - [JavaScript类型检查](basics/type-checking-javascript-files.md)
   - [工具类型](basics/utility-types.md)
+
+  - [变量声明](advanced/variable-declarations.md)
+  - [声明文件](advanced/declaration-files.md)
+  
 - [声明文件](engineering/README.md)
 
 - [感谢](thanks/README.md)
