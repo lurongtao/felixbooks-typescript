@@ -1,0 +1,638 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>类和接口 · 千锋大前端小册-TypeScript</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="古艺散人">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="generics.html" />
+    
+    
+    <link rel="prev" href="classes.html" />
+    
+
+    
+        <link rel="shortcut icon" href='../source/images/favicon.jpg' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../source/images/favicon.jpg' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='../source/images/apple-touch-icon.jpg'>
+    
+    
+        
+        <link rel="apple-touch-icon" sizes="120x120" href="../source/images/apple-touch-icon.jpg">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="../source/images/apple-touch-icon.jpg">
+        
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"lurongtao","repo":"felixbooks-typescript","type":"star","size":"small","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../introduction/README.md">
+            
+                <span>
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../introduction/what-is-typescript.html">
+            
+                <a href="../introduction/what-is-typescript.html">
+            
+                    
+                    什么是 TypeScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../introduction/get-typescript.html">
+            
+                <a href="../introduction/get-typescript.html">
+            
+                    
+                    安装 TypeScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../introduction/hello-typescript.html">
+            
+                <a href="../introduction/hello-typescript.html">
+            
+                    
+                    5分钟了解 TypeScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="basic-types.html">
+            
+                <a href="basic-types.html">
+            
+                    
+                    基础类型-基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="functions.html">
+            
+                <a href="functions.html">
+            
+                    
+                    函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="interfaces.html">
+            
+                <a href="interfaces.html">
+            
+                    
+                    接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="classes.html">
+            
+                <a href="classes.html">
+            
+                    
+                    类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.5" data-path="class-and-interfaces.html">
+            
+                <a href="class-and-interfaces.html">
+            
+                    
+                    类和接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="generics.html">
+            
+                <a href="generics.html">
+            
+                    
+                    泛型
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../advanced/">
+            
+                <a href="../advanced/">
+            
+                    
+                    进阶
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../advanced/basic-types.html">
+            
+                <a href="../advanced/basic-types.html">
+            
+                    
+                    基础类型-高级
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../advanced/symbols.html">
+            
+                <a href="../advanced/symbols.html">
+            
+                    
+                    Symbols
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../advanced/iterators-and-generators.html">
+            
+                <a href="../advanced/iterators-and-generators.html">
+            
+                    
+                    迭代器和生成器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../advanced/decorators.html">
+            
+                <a href="../advanced/decorators.html">
+            
+                    
+                    装饰器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../advanced/variable-declarations.html">
+            
+                <a href="../advanced/variable-declarations.html">
+            
+                    
+                    变量声明
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../engineering/README.md">
+            
+                <span>
+            
+                    
+                    声明文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../thanks/README.md">
+            
+                <span>
+            
+                    
+                    感谢
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >类和接口</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x7C7B;&#x4E0E;&#x63A5;&#x53E3;"><b></b>&#x7C7B;&#x4E0E;&#x63A5;&#x53E3;</a></li><ul><li><span class="title-icon "></span><a href="#&#x7C7B;&#x5B9E;&#x73B0;&#x63A5;&#x53E3;"><b></b>&#x7C7B;&#x5B9E;&#x73B0;&#x63A5;&#x53E3;</a></li><li><span class="title-icon "></span><a href="#&#x63A5;&#x53E3;&#x7EE7;&#x627F;&#x63A5;&#x53E3;"><b></b>&#x63A5;&#x53E3;&#x7EE7;&#x627F;&#x63A5;&#x53E3;</a></li><li><span class="title-icon "></span><a href="#&#x63A5;&#x53E3;&#x7EE7;&#x627F;&#x7C7B;"><b></b>&#x63A5;&#x53E3;&#x7EE7;&#x627F;&#x7C7B;</a></li><li><span class="title-icon "></span><a href="#&#x6DF7;&#x5408;&#x7C7B;&#x578B;"><b></b>&#x6DF7;&#x5408;&#x7C7B;&#x578B;</a></li></ul></ul></div><a href="#&#x7C7B;&#x4E0E;&#x63A5;&#x53E3;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x7C7B;&#x4E0E;&#x63A5;&#x53E3;"><a name="&#x7C7B;&#x4E0E;&#x63A5;&#x53E3;" class="anchor-navigation-ex-anchor" href="#&#x7C7B;&#x4E0E;&#x63A5;&#x53E3;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x7C7B;&#x4E0E;&#x63A5;&#x53E3;" class="plugin-anchor" href="#&#x7C7B;&#x4E0E;&#x63A5;&#x53E3;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7C7B;&#x4E0E;&#x63A5;&#x53E3;</h1>
+<p><a href="interfaces.html">&#x4E4B;&#x524D;&#x5B66;&#x4E60;&#x8FC7;</a>&#xFF0C;&#x63A5;&#x53E3;&#xFF08;Interfaces&#xFF09;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x5BF9;&#x300C;&#x5BF9;&#x8C61;&#x7684;&#x5F62;&#x72B6;&#xFF08;Shape&#xFF09;&#x300D;&#x8FDB;&#x884C;&#x63CF;&#x8FF0;&#x3002;</p>
+<p>&#x8FD9;&#x4E00;&#x7AE0;&#x4E3B;&#x8981;&#x4ECB;&#x7ECD;&#x63A5;&#x53E3;&#x7684;&#x53E6;&#x4E00;&#x4E2A;&#x7528;&#x9014;&#xFF0C;&#x5BF9;&#x7C7B;&#x7684;&#x4E00;&#x90E8;&#x5206;&#x884C;&#x4E3A;&#x8FDB;&#x884C;&#x62BD;&#x8C61;&#x3002;</p>
+<h2 id="&#x7C7B;&#x5B9E;&#x73B0;&#x63A5;&#x53E3;"><a name="&#x7C7B;&#x5B9E;&#x73B0;&#x63A5;&#x53E3;" class="anchor-navigation-ex-anchor" href="#&#x7C7B;&#x5B9E;&#x73B0;&#x63A5;&#x53E3;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x7C7B;&#x5B9E;&#x73B0;&#x63A5;&#x53E3;" class="plugin-anchor" href="#&#x7C7B;&#x5B9E;&#x73B0;&#x63A5;&#x53E3;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7C7B;&#x5B9E;&#x73B0;&#x63A5;&#x53E3;</h2>
+<p>&#x5B9E;&#x73B0;&#xFF08;implements&#xFF09;&#x662F;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x91CD;&#x8981;&#x6982;&#x5FF5;&#x3002;&#x4E00;&#x822C;&#x6765;&#x8BB2;&#xFF0C;&#x4E00;&#x4E2A;&#x7C7B;&#x53EA;&#x80FD;&#x7EE7;&#x627F;&#x81EA;&#x53E6;&#x4E00;&#x4E2A;&#x7C7B;&#xFF0C;&#x6709;&#x65F6;&#x5019;&#x4E0D;&#x540C;&#x7C7B;&#x4E4B;&#x95F4;&#x53EF;&#x4EE5;&#x6709;&#x4E00;&#x4E9B;&#x5171;&#x6709;&#x7684;&#x7279;&#x6027;&#xFF0C;&#x8FD9;&#x65F6;&#x5019;&#x5C31;&#x53EF;&#x4EE5;&#x628A;&#x7279;&#x6027;&#x63D0;&#x53D6;&#x6210;&#x63A5;&#x53E3;&#xFF08;interfaces&#xFF09;&#xFF0C;&#x7528; <code>implements</code> &#x5173;&#x952E;&#x5B57;&#x6765;&#x5B9E;&#x73B0;&#x3002;&#x8FD9;&#x4E2A;&#x7279;&#x6027;&#x5927;&#x5927;&#x63D0;&#x9AD8;&#x4E86;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7684;&#x7075;&#x6D3B;&#x6027;&#x3002;</p>
+<p>&#x4E3E;&#x4F8B;&#x6765;&#x8BF4;&#xFF0C;&#x95E8;&#x662F;&#x4E00;&#x4E2A;&#x7C7B;&#xFF0C;&#x9632;&#x76D7;&#x95E8;&#x662F;&#x95E8;&#x7684;&#x5B50;&#x7C7B;&#x3002;&#x5982;&#x679C;&#x9632;&#x76D7;&#x95E8;&#x6709;&#x4E00;&#x4E2A;&#x62A5;&#x8B66;&#x5668;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x7B80;&#x5355;&#x7684;&#x7ED9;&#x9632;&#x76D7;&#x95E8;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x62A5;&#x8B66;&#x65B9;&#x6CD5;&#x3002;&#x8FD9;&#x65F6;&#x5019;&#x5982;&#x679C;&#x6709;&#x53E6;&#x4E00;&#x4E2A;&#x7C7B;&#xFF0C;&#x8F66;&#xFF0C;&#x4E5F;&#x6709;&#x62A5;&#x8B66;&#x5668;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x8003;&#x8651;&#x628A;&#x62A5;&#x8B66;&#x5668;&#x63D0;&#x53D6;&#x51FA;&#x6765;&#xFF0C;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x63A5;&#x53E3;&#xFF0C;&#x9632;&#x76D7;&#x95E8;&#x548C;&#x8F66;&#x90FD;&#x53BB;&#x5B9E;&#x73B0;&#x5B83;&#xFF1A;</p>
+<pre><code class="lang-ts"><span class="hljs-keyword">interface</span> Alarm {
+  alert()
+}
+
+<span class="hljs-keyword">class</span> Door {
+}
+
+<span class="hljs-keyword">class</span> SecurityDoor extends Door <span class="hljs-keyword">implements</span> Alarm {
+  alert() {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;SecurityDoor alert&apos;</span>)
+  }
+}
+
+<span class="hljs-keyword">class</span> Car <span class="hljs-keyword">implements</span> Alarm {
+  alert() {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Car alert&apos;</span>)
+  }
+}
+</code></pre>
+<p>&#x4E00;&#x4E2A;&#x7C7B;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x591A;&#x4E2A;&#x63A5;&#x53E3;&#xFF1A;</p>
+<pre><code class="lang-ts"><span class="hljs-keyword">interface</span> Alarm {
+  alert()
+}
+
+<span class="hljs-keyword">interface</span> Light {
+  lightOn()
+  lightOff()
+}
+
+<span class="hljs-keyword">class</span> Car <span class="hljs-keyword">implements</span> Alarm, Light {
+  alert() {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Car alert&apos;</span>)
+  }
+  lightOn() {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Car light on&apos;</span>)
+  }
+  lightOff() {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Car light off&apos;</span>)
+  }
+}
+</code></pre>
+<p>&#x4E0A;&#x4F8B;&#x4E2D;&#xFF0C;<code>Car</code> &#x5B9E;&#x73B0;&#x4E86; <code>Alarm</code> &#x548C; <code>Light</code> &#x63A5;&#x53E3;&#xFF0C;&#x65E2;&#x80FD;&#x62A5;&#x8B66;&#xFF0C;&#x4E5F;&#x80FD;&#x5F00;&#x5173;&#x8F66;&#x706F;&#x3002;</p>
+<h2 id="&#x63A5;&#x53E3;&#x7EE7;&#x627F;&#x63A5;&#x53E3;"><a name="&#x63A5;&#x53E3;&#x7EE7;&#x627F;&#x63A5;&#x53E3;" class="anchor-navigation-ex-anchor" href="#&#x63A5;&#x53E3;&#x7EE7;&#x627F;&#x63A5;&#x53E3;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x63A5;&#x53E3;&#x7EE7;&#x627F;&#x63A5;&#x53E3;" class="plugin-anchor" href="#&#x63A5;&#x53E3;&#x7EE7;&#x627F;&#x63A5;&#x53E3;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x63A5;&#x53E3;&#x7EE7;&#x627F;&#x63A5;&#x53E3;</h2>
+<p>&#x63A5;&#x53E3;&#x4E0E;&#x63A5;&#x53E3;&#x4E4B;&#x95F4;&#x53EF;&#x4EE5;&#x662F;&#x7EE7;&#x627F;&#x5173;&#x7CFB;&#xFF1A;</p>
+<pre><code class="lang-ts"><span class="hljs-keyword">interface</span> Alarm {
+  alert()
+}
+
+<span class="hljs-keyword">interface</span> LightableAlarm <span class="hljs-keyword">extends</span> Alarm {
+  lightOn()
+  lightOff()
+}
+</code></pre>
+<p>&#x4E0A;&#x4F8B;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x4F7F;&#x7528; <code>extends</code> &#x4F7F; <code>LightableAlarm</code> &#x7EE7;&#x627F; <code>Alarm</code>&#x3002;</p>
+<h2 id="&#x63A5;&#x53E3;&#x7EE7;&#x627F;&#x7C7B;"><a name="&#x63A5;&#x53E3;&#x7EE7;&#x627F;&#x7C7B;" class="anchor-navigation-ex-anchor" href="#&#x63A5;&#x53E3;&#x7EE7;&#x627F;&#x7C7B;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x63A5;&#x53E3;&#x7EE7;&#x627F;&#x7C7B;" class="plugin-anchor" href="#&#x63A5;&#x53E3;&#x7EE7;&#x627F;&#x7C7B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x63A5;&#x53E3;&#x7EE7;&#x627F;&#x7C7B;</h2>
+<p>&#x63A5;&#x53E3;&#x4E5F;&#x53EF;&#x4EE5;&#x7EE7;&#x627F;&#x7C7B;&#xFF1A;</p>
+<pre><code class="lang-ts"><span class="hljs-keyword">class</span> Point {
+  x: <span class="hljs-built_in">number</span>
+  y: <span class="hljs-built_in">number</span>
+}
+
+<span class="hljs-keyword">interface</span> Point3d <span class="hljs-keyword">extends</span> Point {
+  z: <span class="hljs-built_in">number</span>
+}
+
+<span class="hljs-keyword">let</span> point3d: Point3d = {x: <span class="hljs-number">1</span>, y: <span class="hljs-number">2</span>, z: <span class="hljs-number">3</span>}
+</code></pre>
+<h2 id="&#x6DF7;&#x5408;&#x7C7B;&#x578B;"><a name="&#x6DF7;&#x5408;&#x7C7B;&#x578B;" class="anchor-navigation-ex-anchor" href="#&#x6DF7;&#x5408;&#x7C7B;&#x578B;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x6DF7;&#x5408;&#x7C7B;&#x578B;" class="plugin-anchor" href="#&#x6DF7;&#x5408;&#x7C7B;&#x578B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6DF7;&#x5408;&#x7C7B;&#x578B;</h2>
+<p>&#x4E4B;&#x524D;&#x5B66;&#x4E60;&#x8FC7;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x63A5;&#x53E3;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x9700;&#x8981;&#x7B26;&#x5408;&#x7684;&#x5F62;&#x72B6;&#xFF1A;</p>
+<pre><code class="lang-ts"><span class="hljs-keyword">interface</span> SearchFunc {
+  (source: <span class="hljs-built_in">string</span>, subString: <span class="hljs-built_in">string</span>): <span class="hljs-built_in">boolean</span>
+}
+
+<span class="hljs-keyword">let</span> mySearch: SearchFunc
+mySearch = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">source: <span class="hljs-built_in">string</span>, subString: <span class="hljs-built_in">string</span></span>) </span>{
+  <span class="hljs-keyword">return</span> source.search(subString) !== <span class="hljs-number">-1</span>
+}
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="classes.html" class="navigation navigation-prev " aria-label="Previous page: 类">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="generics.html" class="navigation navigation-next " aria-label="Next page: 泛型">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"类和接口","level":"1.3.5","depth":2,"next":{"title":"泛型","level":"1.3.6","depth":2,"path":"basics/generics.md","ref":"basics/generics.md","articles":[]},"previous":{"title":"类","level":"1.3.4","depth":2,"path":"basics/classes.md","ref":"basics/classes.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","expandable-chapters-small","anchors","github","github-buttons","donate","sharing-plus","anchor-navigation-ex","favicon"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"github":{"url":"https://github.com/lurongtao/felixbooks-typescript"},"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"./source/images/donate.png","alipayText":" ","button":"赞赏","title":"","wechat":"","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"./source/images/favicon.jpg","bookmark":"./source/images/favicon.jpg","appleTouch":"./source/images/apple-touch-icon.jpg","appleTouchMore":{"120x120":"./source/images/apple-touch-icon.jpg","180x180":"./source/images/apple-touch-icon.jpg"}},"github-buttons":{"buttons":[{"user":"lurongtao","repo":"felixbooks-typescript","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"sharing":{"qq":false,"all":["google","facebook","weibo","twitter","qq","qzone","linkedin","pocket"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"古艺散人","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"千锋大前端小册-TypeScript","language":"zh-hans","links":{},"gitbook":"3.2.3","description":"TypeScript 入门教程"},"file":{"path":"basics/class-and-interfaces.md","mtime":"2020-02-10T23:19:28.222Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-11T00:30:40.493Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

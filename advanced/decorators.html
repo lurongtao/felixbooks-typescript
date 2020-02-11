@@ -1,0 +1,953 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>装饰器 · 千锋大前端小册-TypeScript</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="古艺散人">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="variable-declarations.html" />
+    
+    
+    <link rel="prev" href="iterators-and-generators.html" />
+    
+
+    
+        <link rel="shortcut icon" href='../source/images/favicon.jpg' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../source/images/favicon.jpg' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='../source/images/apple-touch-icon.jpg'>
+    
+    
+        
+        <link rel="apple-touch-icon" sizes="120x120" href="../source/images/apple-touch-icon.jpg">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="../source/images/apple-touch-icon.jpg">
+        
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"lurongtao","repo":"felixbooks-typescript","type":"star","size":"small","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../introduction/README.md">
+            
+                <span>
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../introduction/what-is-typescript.html">
+            
+                <a href="../introduction/what-is-typescript.html">
+            
+                    
+                    什么是 TypeScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../introduction/get-typescript.html">
+            
+                <a href="../introduction/get-typescript.html">
+            
+                    
+                    安装 TypeScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../introduction/hello-typescript.html">
+            
+                <a href="../introduction/hello-typescript.html">
+            
+                    
+                    5分钟了解 TypeScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../basics/">
+            
+                <a href="../basics/">
+            
+                    
+                    基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../basics/basic-types.html">
+            
+                <a href="../basics/basic-types.html">
+            
+                    
+                    基础类型-基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../basics/functions.html">
+            
+                <a href="../basics/functions.html">
+            
+                    
+                    函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../basics/interfaces.html">
+            
+                <a href="../basics/interfaces.html">
+            
+                    
+                    接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../basics/classes.html">
+            
+                <a href="../basics/classes.html">
+            
+                    
+                    类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../basics/class-and-interfaces.html">
+            
+                <a href="../basics/class-and-interfaces.html">
+            
+                    
+                    类和接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../basics/generics.html">
+            
+                <a href="../basics/generics.html">
+            
+                    
+                    泛型
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    进阶
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="basic-types.html">
+            
+                <a href="basic-types.html">
+            
+                    
+                    基础类型-高级
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="symbols.html">
+            
+                <a href="symbols.html">
+            
+                    
+                    Symbols
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="iterators-and-generators.html">
+            
+                <a href="iterators-and-generators.html">
+            
+                    
+                    迭代器和生成器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.4" data-path="decorators.html">
+            
+                <a href="decorators.html">
+            
+                    
+                    装饰器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="variable-declarations.html">
+            
+                <a href="variable-declarations.html">
+            
+                    
+                    变量声明
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../engineering/README.md">
+            
+                <span>
+            
+                    
+                    声明文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../thanks/README.md">
+            
+                <span>
+            
+                    
+                    感谢
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >装饰器</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x88C5;&#x9970;&#x5668;"><b></b>&#x88C5;&#x9970;&#x5668;</a></li><ul><li><span class="title-icon "></span><a href="#&#x4ECB;&#x7ECD;"><b></b>&#x4ECB;&#x7ECD;</a></li><ul><li><span class="title-icon "></span><a href="#&#x88C5;&#x9970;&#x5668;&#x7684;&#x79CD;&#x7C7B;"><b></b>&#x88C5;&#x9970;&#x5668;&#x7684;&#x79CD;&#x7C7B;</a></li><li><span class="title-icon "></span><a href="#&#x7C7B;&#x7684;&#x88C5;&#x9970;&#x5668;"><b></b>&#x7C7B;&#x7684;&#x88C5;&#x9970;&#x5668;</a></li><li><span class="title-icon "></span><a href="#&#x7C7B;&#x51FD;&#x6570;&#x88C5;&#x9970;&#x5668;"><b></b>&#x7C7B;&#x51FD;&#x6570;&#x88C5;&#x9970;&#x5668;</a></li><li><span class="title-icon "></span><a href="#&#x7C7B;&#x5C5E;&#x6027;&#x88C5;&#x9970;&#x5668;"><b></b>&#x7C7B;&#x5C5E;&#x6027;&#x88C5;&#x9970;&#x5668;</a></li><li><span class="title-icon "></span><a href="#&#x51E0;&#x79CD;&#x88C5;&#x9970;&#x5668;&#x7684;&#x6267;&#x884C;&#x987A;&#x5E8F;"><b></b>&#x51E0;&#x79CD;&#x88C5;&#x9970;&#x5668;&#x7684;&#x6267;&#x884C;&#x987A;&#x5E8F;</a></li></ul></ul></ul></div><a href="#&#x88C5;&#x9970;&#x5668;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x88C5;&#x9970;&#x5668;"><a name="&#x88C5;&#x9970;&#x5668;" class="anchor-navigation-ex-anchor" href="#&#x88C5;&#x9970;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x88C5;&#x9970;&#x5668;" class="plugin-anchor" href="#&#x88C5;&#x9970;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x88C5;&#x9970;&#x5668;</h1>
+<h2 id="&#x4ECB;&#x7ECD;"><a name="&#x4ECB;&#x7ECD;" class="anchor-navigation-ex-anchor" href="#&#x4ECB;&#x7ECD;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x4ECB;&#x7ECD;" class="plugin-anchor" href="#&#x4ECB;&#x7ECD;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4ECB;&#x7ECD;</h2>
+<blockquote>
+<p>&#x88C5;&#x9970;&#x5668;&#x662F;&#x4E00;&#x79CD;&#x7279;&#x6B8A;&#x7C7B;&#x578B;&#x7684;&#x58F0;&#x660E;&#xFF0C;&#x5B83;&#x80FD;&#x591F;&#x9644;&#x52A0;&#x5230;&#x7C7B;&#x3001;&#x7C7B;&#x7684;&#x51FD;&#x6570;&#x3001;&#x7C7B;&#x5C5E;&#x6027;&#x3001;&#x7C7B;&#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570;&#x4E0A;&#xFF0C;&#x4EE5;&#x8FBE;&#x5230;&#x4FEE;&#x6539;&#x7C7B;&#x7684;&#x884C;&#x4E3A;&#x3002;</p>
+</blockquote>
+<h3 id="&#x88C5;&#x9970;&#x5668;&#x7684;&#x79CD;&#x7C7B;"><a name="&#x88C5;&#x9970;&#x5668;&#x7684;&#x79CD;&#x7C7B;" class="anchor-navigation-ex-anchor" href="#&#x88C5;&#x9970;&#x5668;&#x7684;&#x79CD;&#x7C7B;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x88C5;&#x9970;&#x5668;&#x7684;&#x79CD;&#x7C7B;" class="plugin-anchor" href="#&#x88C5;&#x9970;&#x5668;&#x7684;&#x79CD;&#x7C7B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x88C5;&#x9970;&#x5668;&#x7684;&#x79CD;&#x7C7B;</h3>
+<h4 id="&#x6839;&#x636E;&#x88C5;&#x9970;&#x5668;&#x7684;&#x4F4D;&#x7F6E;"><a name="&#x6839;&#x636E;&#x88C5;&#x9970;&#x5668;&#x7684;&#x4F4D;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#&#x6839;&#x636E;&#x88C5;&#x9970;&#x5668;&#x7684;&#x4F4D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x6839;&#x636E;&#x88C5;&#x9970;&#x5668;&#x7684;&#x4F4D;&#x7F6E;" class="plugin-anchor" href="#&#x6839;&#x636E;&#x88C5;&#x9970;&#x5668;&#x7684;&#x4F4D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6839;&#x636E;&#x88C5;&#x9970;&#x5668;&#x7684;&#x4F4D;&#x7F6E;</h4>
+<ul>
+<li>&#x7C7B;&#x88C5;&#x9970;&#x5668;</li>
+<li>&#x7C7B;&#x51FD;&#x6570;&#x88C5;&#x9970;&#x5668;</li>
+<li>&#x7C7B;&#x5C5E;&#x6027;&#x88C5;&#x9970;&#x5668;</li>
+<li>&#x7C7B;&#x51FD;&#x6570;&#x53C2;&#x6570;&#x88C5;&#x9970;&#x5668;</li>
+</ul>
+<h4 id="&#x6839;&#x636E;&#x88C5;&#x9970;&#x5668;&#x662F;&#x5426;&#x6709;&#x53C2;&#x6570;"><a name="&#x6839;&#x636E;&#x88C5;&#x9970;&#x5668;&#x662F;&#x5426;&#x6709;&#x53C2;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x6839;&#x636E;&#x88C5;&#x9970;&#x5668;&#x662F;&#x5426;&#x6709;&#x53C2;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x6839;&#x636E;&#x88C5;&#x9970;&#x5668;&#x662F;&#x5426;&#x6709;&#x53C2;&#x6570;" class="plugin-anchor" href="#&#x6839;&#x636E;&#x88C5;&#x9970;&#x5668;&#x662F;&#x5426;&#x6709;&#x53C2;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6839;&#x636E;&#x88C5;&#x9970;&#x5668;&#x662F;&#x5426;&#x6709;&#x53C2;&#x6570;</h4>
+<ul>
+<li>&#x65E0;&#x53C2;&#x88C5;&#x9970;&#x5668;(&#x4E00;&#x822C;&#x88C5;&#x9970;&#x5668;)</li>
+<li>&#x6709;&#x53C2;&#x88C5;&#x9970;&#x5668;(&#x88C5;&#x9970;&#x5668;&#x5DE5;&#x5382;)</li>
+</ul>
+<h3 id="&#x7C7B;&#x7684;&#x88C5;&#x9970;&#x5668;"><a name="&#x7C7B;&#x7684;&#x88C5;&#x9970;&#x5668;" class="anchor-navigation-ex-anchor" href="#&#x7C7B;&#x7684;&#x88C5;&#x9970;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x7C7B;&#x7684;&#x88C5;&#x9970;&#x5668;" class="plugin-anchor" href="#&#x7C7B;&#x7684;&#x88C5;&#x9970;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7C7B;&#x7684;&#x88C5;&#x9970;&#x5668;</h3>
+<ul>
+<li>&#x7C7B;&#x88C5;&#x9970;&#x5668;&#x7684;&#x5199;&#x6CD5;</li>
+</ul>
+<pre><code>function desc(target) {
+  console.log(target) // &#x8F93;&#x51FA; [Function: Person]&#x8868;&#x793A;&#x5F53;&#x524D;&#x88C5;&#x9970;&#x7684;&#x7C7B;
+}
+
+@desc
+class Person {
+  public name: string | undefined
+  public age: number | 0
+
+  constructor(name: string, age: number) {
+    this.name = name
+    this.age = age
+  }
+}
+</code></pre><p>&#x6B64;&#x5904; target &#x7C7B;&#x578B;&#x4F1A;&#x9690;&#x5F0F;&#x5B9A;&#x4E49;&#x4E3A;any, &#x8FD9;&#x6837;&#x4F1A;&#x5F15;&#x53D1;&#x4E00;&#x4E2A;TS&#x95EE;&#x9898;&#xFF0C;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF1A;&#x8BBE;&#x7F6E;tsconfig.json </p>
+<p>1&#x3001;&quot;noImplicitAny&quot;: false</p>
+<p>&#x6216;&#x8005;</p>
+<p>2&#x3001;&quot;strict&quot;: false</p>
+<ul>
+<li>&#x4F7F;&#x7528;&#x7C7B;&#x7684;&#x88C5;&#x9970;&#x5668;&#x6269;&#x5C55;&#x7C7B;&#x7684;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;</li>
+</ul>
+<pre><code>function desc(target) {
+  console.log(target)
+  return class extends target {
+    name = &apos;Felixlu&apos;
+    age = 18
+    gender = &apos;&#x7537;&apos;
+    say() {
+      console.log(this.name, this.age, this.gender)
+    }
+  }
+}
+
+@desc
+class Person {
+  public name: string | undefined
+  public age: number | 0
+
+  constructor(name, age) {
+    this.name = name
+    this.age = age
+  }
+
+  say() {
+    console.log(this.name, this.age)
+  }
+}
+
+let p = new Person(&apos;Felix&apos;, 20)
+console.log(p)
+p.say()
+</code></pre><ul>
+<li>&#x4F7F;&#x7528;&#x88C5;&#x9970;&#x5668;&#x4FEE;&#x6539;&#x7C7B;&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;(&#x6784;&#x9020;&#x51FD;&#x6570;&#x7684;&#x91CD;&#x8F7D;&#x3001;&#x65B9;&#x6CD5;&#x91CD;&#x8F7D;)</li>
+</ul>
+<pre><code>function desc(target) {
+  return class extends target{
+    name = &apos;Felixlu&apos;
+    age = 18
+    sayHell() {
+      console.log(&apos;&#x6211;&#x662F;&#x91CD;&#x8F7D;&#x540E;&#x7684;&apos;, this.name)
+    }
+  }
+}
+
+@desc
+class Person {
+  public name: string | undefined
+  public age: number | 0
+
+  constructor() {
+    this.name = &apos;Felix&apos;
+    this.age = 20
+  }
+
+  sayHell() {
+    console.log(&apos;hello word&apos;, this.name)
+  }
+}
+
+let p = new Person()
+console.log(p)
+p.sayHell()
+</code></pre><ul>
+<li>&#x88C5;&#x9970;&#x5668;&#x5DE5;&#x5382;&#x7684;&#x5199;&#x6CD5;</li>
+</ul>
+<pre><code>function desc(params: string) {
+  return function (target: any) {
+    console.log(&apos;params&apos;, params)
+    console.log(&apos;target&apos;, target)
+    // &#x76F4;&#x63A5;&#x5728;&#x539F;&#x578B;&#x4E0A;&#x6269;&#x5C55;&#x4E00;&#x4E2A;&#x5C5E;&#x6027;
+    target.prototype.apiUrl = params
+  }
+}
+
+@desc(&apos;&#x597D;&#x7A0B;&#x5E8F;&#x5458;&apos;)
+class P {
+  say() {
+    console.log(&apos;&#x8BF4;&#x8BDD;&apos;)
+  }
+}
+
+let p: any = new P()
+console.log(p.apiUrl)
+</code></pre><h3 id="&#x7C7B;&#x51FD;&#x6570;&#x88C5;&#x9970;&#x5668;"><a name="&#x7C7B;&#x51FD;&#x6570;&#x88C5;&#x9970;&#x5668;" class="anchor-navigation-ex-anchor" href="#&#x7C7B;&#x51FD;&#x6570;&#x88C5;&#x9970;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x7C7B;&#x51FD;&#x6570;&#x88C5;&#x9970;&#x5668;" class="plugin-anchor" href="#&#x7C7B;&#x51FD;&#x6570;&#x88C5;&#x9970;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7C7B;&#x51FD;&#x6570;&#x88C5;&#x9970;&#x5668;</h3>
+<blockquote>
+<p>&#x5B83;&#x5E94;&#x7528;&#x5230;&#x65B9;&#x6CD5;&#x4E0A;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x76D1;&#x89C6;&#x3001;&#x4FEE;&#x6539;&#x3001;&#x66FF;&#x6362;&#x8BE5;&#x65B9;&#x6CD5;</p>
+</blockquote>
+<ul>
+<li>&#x57FA;&#x672C;&#x4F7F;&#x7528;</li>
+</ul>
+<pre><code>function desc(target, key, descriptor) {
+  console.log(&apos;target&apos;, target) // Person { say: [Function] } &#x8868;&#x793A;&#x7C7B;&#x7684;&#x539F;&#x578B;
+  console.log(&apos;key&apos;, key) // &#x88AB;&#x88C5;&#x9970;&#x7684;&#x51FD;&#x6570;&#x540D;
+  console.log(&apos;descriptor&apos;, descriptor) // &#x88AB;&#x88C5;&#x9970;&#x7684;&#x51FD;&#x6570;&#x7684;&#x5BF9;&#x8C61;&#x5C5E;&#x6027;
+}
+
+class Person {
+  public name: string | undefined
+  public age: number | 0
+
+  constructor(name, age) {
+    this.name = name
+    this.age = age
+  }
+
+  @desc
+  say() {
+    console.log(&apos;&#x8BF4;&#x7684;&#x65B9;&#x6CD5;&apos;)
+  }
+}
+</code></pre><ul>
+<li>&#x5728;&#x88C5;&#x9970;&#x5668;&#x4E2D;&#x6DFB;&#x52A0;&#x7C7B;&#x7684;&#x539F;&#x578B;&#x5C5E;&#x6027;&#x548C;&#x539F;&#x578B;&#x65B9;&#x6CD5;</li>
+</ul>
+<pre><code>function desc(target, key, descriptor) {
+  target.gender = &apos;&#x7537;&apos;
+  target.foo = function () {
+    console.log(&apos;&#x6211;&#x662F;&#x539F;&#x578B;&#x4E0A;&#x7684;&#x65B9;&#x6CD5;&apos;)
+  }
+}
+
+class Person {
+  public name: string | undefined
+  public age: number | 0
+
+  constructor(name, age) {
+    this.name = name
+    this.age = age
+  }
+
+  @desc
+  say() {
+    console.log(&apos;&#x8BF4;&#x7684;&#x65B9;&#x6CD5;&apos;)
+  }
+}
+
+// &#x6D4B;&#x8BD5;&#x4EE3;&#x7801;
+let p: any = new Person(&apos;Felixlu&apos;, 20)
+console.log(p)
+console.log(Person.prototype)
+p.say()
+console.log(p.gender); // &#x4F7F;&#x7528;p&#x539F;&#x578B;&#x94FE;&#x4E0A;&#x7684;&#x5C5E;&#x6027;
+p.foo() // &#x8C03;&#x7528;&#x4E86;p&#x539F;&#x578B;&#x94FE;&#x4E0A;&#x7684;&#x65B9;&#x6CD5;
+</code></pre><ul>
+<li>&#x4F7F;&#x7528;&#x88C5;&#x9970;&#x5668;&#x62E6;&#x622A;&#x51FD;&#x6570;&#x7684;&#x8C03;&#x7528;&#xFF08;&#x66FF;&#x6362;&#xFF09;</li>
+</ul>
+<pre><code>function desc(params: string) {
+  return function (target: any, key: string, descriptor: {[propsName: string]: any}) {
+    // &#x4FEE;&#x6539;&#x88AB;&#x88C5;&#x9970;&#x7684;&#x51FD;&#x6570;
+    descriptor.value = function (...args: Array&lt;any&gt;) {
+      args = args.map(it =&gt; String(it))
+      console.log(args)
+    }
+  }
+}
+
+class Person {
+  public name: string | undefined
+  public age: number | 0
+
+  constructor(name, age) {
+    this.name = name
+    this.age = age
+  }
+
+  @desc(&apos;&#x88C5;&#x9970;&#x5668;&#x4E0A;&#x7684;&#x53C2;&#x6570;&apos;)
+  say() {
+    console.log(&apos;&#x8BF4;&#x7684;&#x65B9;&#x6CD5;&apos;)
+  }
+}
+
+
+let p: any = new Person(&apos;Felixlu&apos;, 20)
+console.log(p)
+p.say(123, 23, &apos;&#x4F60;&#x597D;&apos;)
+</code></pre><ul>
+<li>&#x4F7F;&#x7528;&#x88C5;&#x9970;&#x5668;&#x62E6;&#x622A;&#x51FD;&#x6570;&#x7684;&#x8C03;&#x7528;(&#x9644;&#x52A0;&#x65B0;&#x7684;&#x529F;&#x80FD;)</li>
+</ul>
+<pre><code>function desc(params: string) {
+  return function (target: any, key: string, descriptor: {[propsName: string]: any}) {
+    // &#x4FEE;&#x6539;&#x88AB;&#x88C5;&#x9970;&#x7684;&#x51FD;&#x6570;&#x7684;
+    let method = descriptor.value
+    descriptor.value = function (...args: Array&lt;any&gt;) {
+      args = args.map(it =&gt; String(it))
+      console.log(args)
+      method.apply(this, args)
+    }
+  }
+}
+class Person {
+  public name: string | undefined
+  public age: number | 0
+
+  constructor(name, age) {
+    this.name = name
+    this.age = age
+  }
+
+  @desc(&apos;&#x88C5;&#x9970;&#x5668;&#x4E0A;&#x7684;&#x53C2;&#x6570;&apos;)
+  say(...args) {
+    console.log(&apos;&#x8BF4;&#x7684;&#x65B9;&#x6CD5;&apos;, args)
+  }
+}
+
+
+let p = new Person(&apos;Felixlu&apos;, 20)
+console.log(p)
+p.say(123, 23, &apos;&#x4F60;&#x597D;&apos;)
+</code></pre><h3 id="&#x7C7B;&#x5C5E;&#x6027;&#x88C5;&#x9970;&#x5668;"><a name="&#x7C7B;&#x5C5E;&#x6027;&#x88C5;&#x9970;&#x5668;" class="anchor-navigation-ex-anchor" href="#&#x7C7B;&#x5C5E;&#x6027;&#x88C5;&#x9970;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x7C7B;&#x5C5E;&#x6027;&#x88C5;&#x9970;&#x5668;" class="plugin-anchor" href="#&#x7C7B;&#x5C5E;&#x6027;&#x88C5;&#x9970;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7C7B;&#x5C5E;&#x6027;&#x88C5;&#x9970;&#x5668;</h3>
+<ul>
+<li>&#x57FA;&#x672C;&#x7528;&#x6CD5;</li>
+</ul>
+<pre><code>function desc(target, name) {
+  console.log(&apos;target&apos;, target, target.constructor) // &#x8868;&#x793A;&#x7C7B;&#x7684;&#x539F;&#x578B;
+  console.log(&apos;name&apos;, name) // &#x8868;&#x793A;&#x88AB;&#x88C5;&#x9970;&#x5C5E;&#x6027;&#x540D;
+}
+
+class Person {
+  public name: string | undefined
+  public age: number | 0
+
+  @desc
+  private gender: string | undefined
+
+  constructor(name, age) {
+    this.name = name
+    this.age = age
+  }
+}
+
+let p = new Person(&apos;Felixlu&apos;, 20)
+console.log(p)
+</code></pre><ul>
+<li>&#x5728;&#x88C5;&#x9970;&#x5668;&#x4E2D;&#x4FEE;&#x6539;&#x5C5E;&#x6027;&#x503C;</li>
+</ul>
+<pre><code>function desc(target, name) {
+  target[name] = &apos;&#x5973;&apos;
+}
+
+
+class Person {
+  public name: string | undefined
+  public age: number | 0
+
+  @desc
+  public gender: string | undefined
+
+  constructor(name, age) {
+    this.name = name
+    this.age = age
+  }
+
+  say() {
+    console.log(this.name, this.age, this.gender)
+  }
+}
+
+let p = new Person(&apos;Felixlu&apos;, 20)
+console.log(p)
+p.say()
+</code></pre><ul>
+<li>&#x7C7B;&#x51FD;&#x6570;&#x53C2;&#x6570;&#x7684;&#x88C5;&#x9970;&#x5668;</li>
+</ul>
+<blockquote>
+<p>&#x53C2;&#x6570;&#x88C5;&#x9970;&#x5668;&#x8868;&#x8FBE;&#x5F0F;&#x4F1A;&#x5728;&#x8FD0;&#x884C;&#x65F6;&#x5019;&#x5F53;&#x505A;&#x51FD;&#x6570;&#x88AB;&#x8C03;&#x7528;&#xFF0C;&#x4EE5;&#x4F7F;&#x7528;&#x53C2;&#x6570;&#x88C5;&#x9970;&#x5668;&#x4E3A;&#x7C7B;&#x7684;&#x539F;&#x578B;&#x4E0A;&#x9644;&#x52A0;&#x4E00;&#x4E9B;&#x5143;&#x6570;&#x636E;</p>
+</blockquote>
+<ul>
+<li>&#x57FA;&#x672C;&#x7528;&#x6CD5;</li>
+</ul>
+<pre><code>function desc(params: string) {
+  return function (target: any, key, index) {
+    console.log(target); // &#x7C7B;&#x7684;&#x539F;&#x578B;
+    console.log(key); // &#x88AB;&#x88C5;&#x9970;&#x7684;&#x540D;&#x5B57;
+    console.log(index); // &#x5E8F;&#x5217;&#x5316;
+  } 
+}
+class Person {
+  public name: string | undefined
+  public age: number | 0
+
+  constructor(name, age) {
+    this.name = name
+    this.age = age
+  }
+
+  say(@desc(&apos;&#x53C2;&#x6570;&#x88C5;&#x9970;&#x5668;&apos;) age: number) {
+    console.log(&apos;&#x8BF4;&#x7684;&#x65B9;&#x6CD5;&apos;)
+  }
+}
+
+let p = new Person(&apos;Felixlu&apos;, 20)
+console.log(p)
+p.say(20)
+</code></pre><ul>
+<li>&#x4E3A;&#x7C7B;&#x7684;&#x539F;&#x578B;&#x4E0A;&#x6DFB;&#x52A0;&#x4E00;&#x4E9B;&#x4E1C;&#x897F;</li>
+</ul>
+<pre><code>function desc(params: string) {
+  return function (target: any, key, index) {
+    console.log(target); // &#x7C7B;&#x7684;&#x539F;&#x578B;
+    console.log(key); // &#x88AB;&#x88C5;&#x9970;&#x7684;&#x540D;&#x5B57;
+    console.log(index); // &#x5E8F;&#x5217;&#x5316;
+    target.message = params;
+  } 
+}
+class Person {
+  public name: string | undefined;
+  public age: number | 0;
+
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  say(@desc(&apos;&#x53C2;&#x6570;&#x88C5;&#x9970;&#x5668;&apos;) age: number) {
+    console.log(&apos;&#x8BF4;&#x7684;&#x65B9;&#x6CD5;&apos;)
+  }
+}
+
+
+let p: any = new Person(&apos;&#x54C8;&#x54C8;&apos;, 20);
+console.log(p);
+p.say(20);
+console.log(p.message)
+</code></pre><h3 id="&#x51E0;&#x79CD;&#x88C5;&#x9970;&#x5668;&#x7684;&#x6267;&#x884C;&#x987A;&#x5E8F;"><a name="&#x51E0;&#x79CD;&#x88C5;&#x9970;&#x5668;&#x7684;&#x6267;&#x884C;&#x987A;&#x5E8F;" class="anchor-navigation-ex-anchor" href="#&#x51E0;&#x79CD;&#x88C5;&#x9970;&#x5668;&#x7684;&#x6267;&#x884C;&#x987A;&#x5E8F;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x51E0;&#x79CD;&#x88C5;&#x9970;&#x5668;&#x7684;&#x6267;&#x884C;&#x987A;&#x5E8F;" class="plugin-anchor" href="#&#x51E0;&#x79CD;&#x88C5;&#x9970;&#x5668;&#x7684;&#x6267;&#x884C;&#x987A;&#x5E8F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x51E0;&#x79CD;&#x88C5;&#x9970;&#x5668;&#x7684;&#x6267;&#x884C;&#x987A;&#x5E8F;</h3>
+<pre><code>function logCls(params: string) {
+  return function (target: any) {
+    console.log(&apos;4.&#x7C7B;&#x7684;&#x88C5;&#x9970;&#x5668;&apos;);
+  }
+}
+
+function logMethod(params: string) {
+  return function (target: any, key: string, descriptor: {[propsName: string]: any}) {
+    console.log(&apos;3.&#x7C7B;&#x7684;&#x51FD;&#x6570;&#x88C5;&#x9970;&#x5668;&apos;);
+  }
+}
+
+function logParams(params: string) {
+  return function (target: any, name: string) {
+    console.log(&apos;1.&#x7C7B;&#x5C5E;&#x6027;&#x88C5;&#x9970;&#x5668;&apos;);
+  }
+}
+
+function logQuery(params: string) {
+  return function (target: any, key: string, index: number) {
+    console.log(&apos;2.&#x51FD;&#x6570;&#x53C2;&#x6570;&#x88C5;&#x9970;&#x5668;&apos;);
+  }
+}
+
+@logCls(&apos;&#x7C7B;&#x7684;&#x88C5;&#x9970;&#x5668;&apos;)
+class Person{
+  @logParams(&apos;&#x5C5E;&#x6027;&#x88C5;&#x9970;&#x5668;&apos;)
+  public name: string | undefined;
+
+  @logMehod(&apos;&#x51FD;&#x6570;&#x88C5;&#x9970;&#x5668;&apos;)
+  getData(@logQuery(&apos;&#x51FD;&#x6570;&#x53C2;&#x6570;&#x88C5;&#x9970;&#x5668;&apos;) age: number, @logQuery(&apos;&#x51FD;&#x6570;&#x53C2;&#x6570;&#x88C5;&#x9970;&#x5668;&apos;) gender: string) {
+    console.log(&apos;----&apos;);
+  }
+}
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="iterators-and-generators.html" class="navigation navigation-prev " aria-label="Previous page: 迭代器和生成器">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="variable-declarations.html" class="navigation navigation-next " aria-label="Next page: 变量声明">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"装饰器","level":"1.4.4","depth":2,"next":{"title":"变量声明","level":"1.4.5","depth":2,"path":"advanced/variable-declarations.md","ref":"advanced/variable-declarations.md","articles":[]},"previous":{"title":"迭代器和生成器","level":"1.4.3","depth":2,"path":"advanced/iterators-and-generators.md","ref":"advanced/iterators-and-generators.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","expandable-chapters-small","anchors","github","github-buttons","donate","sharing-plus","anchor-navigation-ex","favicon"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"github":{"url":"https://github.com/lurongtao/felixbooks-typescript"},"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"./source/images/donate.png","alipayText":" ","button":"赞赏","title":"","wechat":"","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"./source/images/favicon.jpg","bookmark":"./source/images/favicon.jpg","appleTouch":"./source/images/apple-touch-icon.jpg","appleTouchMore":{"120x120":"./source/images/apple-touch-icon.jpg","180x180":"./source/images/apple-touch-icon.jpg"}},"github-buttons":{"buttons":[{"user":"lurongtao","repo":"felixbooks-typescript","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"sharing":{"qq":false,"all":["google","facebook","weibo","twitter","qq","qzone","linkedin","pocket"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"古艺散人","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"千锋大前端小册-TypeScript","language":"zh-hans","links":{},"gitbook":"3.2.3","description":"TypeScript 入门教程"},"file":{"path":"advanced/decorators.md","mtime":"2020-02-10T16:14:52.502Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-11T00:30:40.493Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

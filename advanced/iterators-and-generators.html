@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>安装 TypeScript · 千锋大前端小册-TypeScript</title>
+        <title>迭代器和生成器 · 千锋大前端小册-TypeScript</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -69,10 +69,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="hello-typescript.html" />
+    <link rel="next" href="decorators.html" />
     
     
-    <link rel="prev" href="what-is-typescript.html" />
+    <link rel="prev" href="symbols.html" />
     
 
     
@@ -142,7 +142,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="README.md">
+        <li class="chapter " data-level="1.2" data-path="../introduction/README.md">
             
                 <span>
             
@@ -156,9 +156,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1" data-path="what-is-typescript.html">
+        <li class="chapter " data-level="1.2.1" data-path="../introduction/what-is-typescript.html">
             
-                <a href="what-is-typescript.html">
+                <a href="../introduction/what-is-typescript.html">
             
                     
                     什么是 TypeScript
@@ -169,9 +169,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.2" data-path="get-typescript.html">
+        <li class="chapter " data-level="1.2.2" data-path="../introduction/get-typescript.html">
             
-                <a href="get-typescript.html">
+                <a href="../introduction/get-typescript.html">
             
                     
                     安装 TypeScript
@@ -182,9 +182,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.3" data-path="hello-typescript.html">
+        <li class="chapter " data-level="1.2.3" data-path="../introduction/hello-typescript.html">
             
-                <a href="hello-typescript.html">
+                <a href="../introduction/hello-typescript.html">
             
                     
                     5分钟了解 TypeScript
@@ -297,9 +297,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="../advanced/">
+        <li class="chapter " data-level="1.4" data-path="./">
             
-                <a href="../advanced/">
+                <a href="./">
             
                     
                     进阶
@@ -311,9 +311,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="../advanced/basic-types.html">
+        <li class="chapter " data-level="1.4.1" data-path="basic-types.html">
             
-                <a href="../advanced/basic-types.html">
+                <a href="basic-types.html">
             
                     
                     基础类型-高级
@@ -324,9 +324,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2" data-path="../advanced/symbols.html">
+        <li class="chapter " data-level="1.4.2" data-path="symbols.html">
             
-                <a href="../advanced/symbols.html">
+                <a href="symbols.html">
             
                     
                     Symbols
@@ -337,9 +337,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3" data-path="../advanced/iterators-and-generators.html">
+        <li class="chapter active" data-level="1.4.3" data-path="iterators-and-generators.html">
             
-                <a href="../advanced/iterators-and-generators.html">
+                <a href="iterators-and-generators.html">
             
                     
                     迭代器和生成器
@@ -350,9 +350,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.4" data-path="../advanced/decorators.html">
+        <li class="chapter " data-level="1.4.4" data-path="decorators.html">
             
-                <a href="../advanced/decorators.html">
+                <a href="decorators.html">
             
                     
                     装饰器
@@ -363,9 +363,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.5" data-path="../advanced/variable-declarations.html">
+        <li class="chapter " data-level="1.4.5" data-path="variable-declarations.html">
             
-                <a href="../advanced/variable-declarations.html">
+                <a href="variable-declarations.html">
             
                     
                     变量声明
@@ -437,7 +437,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >安装 TypeScript</a>
+        <a href=".." >迭代器和生成器</a>
     </h1>
 </div>
 
@@ -452,19 +452,38 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x5B89;&#x88C5;typescript"><b></b>&#x5B89;&#x88C5;TypeScript</a></li><ul><li><span class="title-icon "></span><a href="#1&#x3001;&#x5728;&#x5168;&#x5C40;&#x73AF;&#x5883;&#x91CC;&#x5B89;&#x88C5;ts"><b></b>1&#x3001;&#x5728;&#x5168;&#x5C40;&#x73AF;&#x5883;&#x91CC;&#x5B89;&#x88C5;TS</a></li><li><span class="title-icon "></span><a href="#2&#x3001;&#x7528;-tsc-&#x547D;&#x4EE4;&#x7F16;&#x8BD1;-ts-&#x6587;&#x4EF6;"><b></b>2&#x3001;&#x7528; tsc &#x547D;&#x4EE4;&#x7F16;&#x8BD1; .ts &#x6587;&#x4EF6;</a></li><li><span class="title-icon "></span><a href="#3&#x3001;tsconfigjson-&#x914D;&#x7F6E;&#x6587;&#x4EF6;"><b></b>3&#x3001;tsconfig.json &#x914D;&#x7F6E;&#x6587;&#x4EF6;</a></li></ul></ul></div><a href="#&#x5B89;&#x88C5;typescript" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x5B89;&#x88C5;typescript"><a name="&#x5B89;&#x88C5;typescript" class="anchor-navigation-ex-anchor" href="#&#x5B89;&#x88C5;typescript"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5B89;&#x88C5;typescript" class="plugin-anchor" href="#&#x5B89;&#x88C5;typescript"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B89;&#x88C5;TypeScript</h1>
-<h2 id="1&#x3001;&#x5728;&#x5168;&#x5C40;&#x73AF;&#x5883;&#x91CC;&#x5B89;&#x88C5;ts"><a name="1&#x3001;&#x5728;&#x5168;&#x5C40;&#x73AF;&#x5883;&#x91CC;&#x5B89;&#x88C5;ts" class="anchor-navigation-ex-anchor" href="#1&#x3001;&#x5728;&#x5168;&#x5C40;&#x73AF;&#x5883;&#x91CC;&#x5B89;&#x88C5;ts"><i class="fa fa-link" aria-hidden="true"></i></a><a name="1&#x3001;&#x5728;&#x5168;&#x5C40;&#x73AF;&#x5883;&#x91CC;&#x5B89;&#x88C5;ts" class="plugin-anchor" href="#1&#x3001;&#x5728;&#x5168;&#x5C40;&#x73AF;&#x5883;&#x91CC;&#x5B89;&#x88C5;ts"><i class="fa fa-link" aria-hidden="true"></i></a>1&#x3001;&#x5728;&#x5168;&#x5C40;&#x73AF;&#x5883;&#x91CC;&#x5B89;&#x88C5;TS</h2>
-<pre><code>npm install -g typescript
-</code></pre><h2 id="2&#x3001;&#x7528;-tsc-&#x547D;&#x4EE4;&#x7F16;&#x8BD1;-ts-&#x6587;&#x4EF6;"><a name="2&#x3001;&#x7528;-tsc-&#x547D;&#x4EE4;&#x7F16;&#x8BD1;-ts-&#x6587;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#2&#x3001;&#x7528;-tsc-&#x547D;&#x4EE4;&#x7F16;&#x8BD1;-ts-&#x6587;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="2&#x3001;&#x7528;-tsc-&#x547D;&#x4EE4;&#x7F16;&#x8BD1;-ts-&#x6587;&#x4EF6;" class="plugin-anchor" href="#2&#x3001;&#x7528;-tsc-&#x547D;&#x4EE4;&#x7F16;&#x8BD1;-ts-&#x6587;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>2&#x3001;&#x7528; tsc &#x547D;&#x4EE4;&#x7F16;&#x8BD1; .ts &#x6587;&#x4EF6;</h2>
-<p>app.ts &#x6587;&#x4EF6;&#xFF1A;</p>
-<pre><code>let title: string = &apos;&#x5343;&#x950B;&#x6559;&#x80B2;&apos;
-</code></pre><p>&#x5728;&#x547D;&#x4EE4;&#x884C;&#x91CC;&#x8F93;&#x5165;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#x90FD;&#x53EF;&#x4EE5;&#x5C06;.ts&#x6587;&#x4EF6;&#x7F16;&#x8BD1;&#x4E3A;.js&#x6587;&#x4EF6;&#xFF1A;</p>
-<pre><code>tsc ./src/app.ts --outFile ./dist/app.js
-tsc ./src/* --outDir ./dist --watch
-</code></pre><h2 id="3&#x3001;tsconfigjson-&#x914D;&#x7F6E;&#x6587;&#x4EF6;"><a name="3&#x3001;tsconfigjson-&#x914D;&#x7F6E;&#x6587;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#3&#x3001;tsconfigjson-&#x914D;&#x7F6E;&#x6587;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="3&#x3001;tsconfigjson-&#x914D;&#x7F6E;&#x6587;&#x4EF6;" class="plugin-anchor" href="#3&#x3001;tsconfigjson-&#x914D;&#x7F6E;&#x6587;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>3&#x3001;tsconfig.json &#x914D;&#x7F6E;&#x6587;&#x4EF6;</h2>
-<p>&#x5728;&#x547D;&#x4EE4;&#x884C;&#x91CC;&#x8F93;&#x5165; <code>tsc --init</code>&#x547D;&#x4EE4;&#xFF0C;&#x521B;&#x5EFA;&#x4E00;&#x4E2A; tsconfig.json &#x6587;&#x4EF6;&#xFF0C;&#x5728;&#x6B64;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x91CC;&#x4FEE;&#x6539;&#xFF1A;</p>
-<pre><code>&quot;outDir&quot;: &quot;./dist&quot;,
-&quot;rootDir&quot;: &quot;./src&quot;
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x8FED;&#x4EE3;&#x5668;&#x548C;&#x751F;&#x6210;&#x5668;"><b></b>&#x8FED;&#x4EE3;&#x5668;&#x548C;&#x751F;&#x6210;&#x5668;</a></li><ul><li><span class="title-icon "></span><a href="#&#x53EF;&#x8FED;&#x4EE3;&#x6027;"><b></b>&#x53EF;&#x8FED;&#x4EE3;&#x6027;</a></li><ul><li><span class="title-icon "></span><a href="#forof-&#x8BED;&#x53E5;"><b></b>for..of &#x8BED;&#x53E5;</a></li><li><span class="title-icon "></span><a href="#forof-vs-forin-&#x8BED;&#x53E5;"><b></b>for..of vs. for..in &#x8BED;&#x53E5;</a></li></ul></ul></ul></div><a href="#&#x8FED;&#x4EE3;&#x5668;&#x548C;&#x751F;&#x6210;&#x5668;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x8FED;&#x4EE3;&#x5668;&#x548C;&#x751F;&#x6210;&#x5668;"><a name="&#x8FED;&#x4EE3;&#x5668;&#x548C;&#x751F;&#x6210;&#x5668;" class="anchor-navigation-ex-anchor" href="#&#x8FED;&#x4EE3;&#x5668;&#x548C;&#x751F;&#x6210;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x8FED;&#x4EE3;&#x5668;&#x548C;&#x751F;&#x6210;&#x5668;" class="plugin-anchor" href="#&#x8FED;&#x4EE3;&#x5668;&#x548C;&#x751F;&#x6210;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FED;&#x4EE3;&#x5668;&#x548C;&#x751F;&#x6210;&#x5668;</h1>
+<h2 id="&#x53EF;&#x8FED;&#x4EE3;&#x6027;"><a name="&#x53EF;&#x8FED;&#x4EE3;&#x6027;" class="anchor-navigation-ex-anchor" href="#&#x53EF;&#x8FED;&#x4EE3;&#x6027;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x53EF;&#x8FED;&#x4EE3;&#x6027;" class="plugin-anchor" href="#&#x53EF;&#x8FED;&#x4EE3;&#x6027;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53EF;&#x8FED;&#x4EE3;&#x6027;</h2>
+<h3 id="forof-&#x8BED;&#x53E5;"><a name="forof-&#x8BED;&#x53E5;" class="anchor-navigation-ex-anchor" href="#forof-&#x8BED;&#x53E5;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="forof-&#x8BED;&#x53E5;" class="plugin-anchor" href="#forof-&#x8BED;&#x53E5;"><i class="fa fa-link" aria-hidden="true"></i></a>for..of &#x8BED;&#x53E5;</h3>
+<p>for..of&#x4F1A;&#x904D;&#x5386;&#x53EF;&#x8FED;&#x4EE3;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x8C03;&#x7528;&#x5BF9;&#x8C61;&#x4E0A;&#x7684;Symbol.iterator&#x65B9;&#x6CD5;&#x3002; &#x4E0B;&#x9762;&#x662F;&#x5728;&#x6570;&#x7EC4;&#x4E0A;&#x4F7F;&#x7528; for..of&#x7684;&#x7B80;&#x5355;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code>let someArray = [1, &quot;string&quot;, false]
+
+for (let entry of someArray) {
+  console.log(entry) // 1, &quot;string&quot;, false
+}
+</code></pre><h3 id="forof-vs-forin-&#x8BED;&#x53E5;"><a name="forof-vs-forin-&#x8BED;&#x53E5;" class="anchor-navigation-ex-anchor" href="#forof-vs-forin-&#x8BED;&#x53E5;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="forof-vs-forin-&#x8BED;&#x53E5;" class="plugin-anchor" href="#forof-vs-forin-&#x8BED;&#x53E5;"><i class="fa fa-link" aria-hidden="true"></i></a>for..of vs. for..in &#x8BED;&#x53E5;</h3>
+<p>for..of&#x548C;for..in&#x5747;&#x53EF;&#x8FED;&#x4EE3;&#x4E00;&#x4E2A;&#x5217;&#x8868;&#xFF1B;&#x4F46;&#x662F;&#x7528;&#x4E8E;&#x8FED;&#x4EE3;&#x7684;&#x503C;&#x5374;&#x4E0D;&#x540C;&#xFF0C;for..in&#x8FED;&#x4EE3;&#x7684;&#x662F;&#x5BF9;&#x8C61;&#x7684;&#x952E;&#x7684;&#x5217;&#x8868;&#xFF0C;&#x800C;for..of&#x5219;&#x8FED;&#x4EE3;&#x5BF9;&#x8C61;&#x7684;&#x952E;&#x5BF9;&#x5E94;&#x7684;&#x503C;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x5C55;&#x793A;&#x4E86;&#x4E24;&#x8005;&#x4E4B;&#x95F4;&#x7684;&#x533A;&#x522B;&#xFF1A;</p>
+<pre><code>let list = [4, 5, 6]
+
+for (let i in list) {
+  console.log(i) // &quot;0&quot;, &quot;1&quot;, &quot;2&quot;,
+}
+
+for (let i of list) {
+  console.log(i) // &quot;4&quot;, &quot;5&quot;, &quot;6&quot;
+}
+</code></pre><p>&#x53E6;&#x4E00;&#x4E2A;&#x533A;&#x522B;&#x662F;for..in&#x53EF;&#x4EE5;&#x64CD;&#x4F5C;&#x4EFB;&#x4F55;&#x5BF9;&#x8C61;, &#x5B83;&#x63D0;&#x4F9B;&#x4E86;&#x67E5;&#x770B;&#x5BF9;&#x8C61;&#x5C5E;&#x6027;&#x7684;&#x4E00;&#x79CD;&#x65B9;&#x6CD5;&#x3002; &#x4F46;&#x662F; for..of&#x5173;&#x6CE8;&#x4E8E;&#x8FED;&#x4EE3;&#x5BF9;&#x8C61;&#x7684;&#x503C;&#x3002;&#x5185;&#x7F6E;&#x5BF9;&#x8C61;Map&#x548C;Set&#x5DF2;&#x7ECF;&#x5B9E;&#x73B0;&#x4E86;Symbol.iterator&#x65B9;&#x6CD5;&#xFF0C;&#x8BA9;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x5B83;&#x4EEC;&#x4FDD;&#x5B58;&#x7684;&#x503C;&#x3002;</p>
+<pre><code>let pets = new Set([&quot;Cat&quot;, &quot;Dog&quot;, &quot;Hamster&quot;]);
+pets[&quot;species&quot;] = &quot;mammals&quot;
+
+for (let pet in pets) {
+  console.log(pet) // &quot;species&quot;
+}
+
+for (let pet of pets) {
+  console.log(pet) // &quot;Cat&quot;, &quot;Dog&quot;, &quot;Hamster&quot;
+}
 </code></pre>
                                 
                                 </section>
@@ -492,12 +511,12 @@ tsc ./src/* --outDir ./dist --watch
 
             
                 
-                <a href="what-is-typescript.html" class="navigation navigation-prev " aria-label="Previous page: 什么是 TypeScript">
+                <a href="symbols.html" class="navigation navigation-prev " aria-label="Previous page: Symbols">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="hello-typescript.html" class="navigation navigation-next " aria-label="Next page: 5分钟了解 TypeScript">
+                <a href="decorators.html" class="navigation navigation-next " aria-label="Next page: 装饰器">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -508,7 +527,7 @@ tsc ./src/* --outDir ./dist --watch
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"安装 TypeScript","level":"1.2.2","depth":2,"next":{"title":"5分钟了解 TypeScript","level":"1.2.3","depth":2,"path":"introduction/hello-typescript.md","ref":"introduction/hello-typescript.md","articles":[]},"previous":{"title":"什么是 TypeScript","level":"1.2.1","depth":2,"path":"introduction/what-is-typescript.md","ref":"introduction/what-is-typescript.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","expandable-chapters-small","anchors","github","github-buttons","donate","sharing-plus","anchor-navigation-ex","favicon"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"github":{"url":"https://github.com/lurongtao/felixbooks-typescript"},"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"./source/images/donate.png","alipayText":" ","button":"赞赏","title":"","wechat":"","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"./source/images/favicon.jpg","bookmark":"./source/images/favicon.jpg","appleTouch":"./source/images/apple-touch-icon.jpg","appleTouchMore":{"120x120":"./source/images/apple-touch-icon.jpg","180x180":"./source/images/apple-touch-icon.jpg"}},"github-buttons":{"buttons":[{"user":"lurongtao","repo":"felixbooks-typescript","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"sharing":{"qq":false,"all":["google","facebook","weibo","twitter","qq","qzone","linkedin","pocket"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"古艺散人","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"千锋大前端小册-TypeScript","language":"zh-hans","links":{},"gitbook":"3.2.3","description":"TypeScript 入门教程"},"file":{"path":"introduction/get-typescript.md","mtime":"2020-01-15T13:34:33.782Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-11T00:30:40.493Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"迭代器和生成器","level":"1.4.3","depth":2,"next":{"title":"装饰器","level":"1.4.4","depth":2,"path":"advanced/decorators.md","ref":"advanced/decorators.md","articles":[]},"previous":{"title":"Symbols","level":"1.4.2","depth":2,"path":"advanced/symbols.md","ref":"advanced/symbols.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","expandable-chapters-small","anchors","github","github-buttons","donate","sharing-plus","anchor-navigation-ex","favicon"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"github":{"url":"https://github.com/lurongtao/felixbooks-typescript"},"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"./source/images/donate.png","alipayText":" ","button":"赞赏","title":"","wechat":"","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"./source/images/favicon.jpg","bookmark":"./source/images/favicon.jpg","appleTouch":"./source/images/apple-touch-icon.jpg","appleTouchMore":{"120x120":"./source/images/apple-touch-icon.jpg","180x180":"./source/images/apple-touch-icon.jpg"}},"github-buttons":{"buttons":[{"user":"lurongtao","repo":"felixbooks-typescript","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"sharing":{"qq":false,"all":["google","facebook","weibo","twitter","qq","qzone","linkedin","pocket"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"古艺散人","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"千锋大前端小册-TypeScript","language":"zh-hans","links":{},"gitbook":"3.2.3","description":"TypeScript 入门教程"},"file":{"path":"advanced/iterators-and-generators.md","mtime":"2020-02-10T12:31:11.957Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-11T00:30:40.493Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
