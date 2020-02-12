@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Symbols · 千锋大前端小册-TypeScript</title>
+        <title>声明合并 · 千锋大前端小册-TypeScript</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -69,10 +69,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="iterators-and-generators.html" />
+    <link rel="next" href="variable-declarations.html" />
     
     
-    <link rel="prev" href="basic-types.html" />
+    <link rel="prev" href="declaration-files.html" />
     
 
     
@@ -324,7 +324,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.4.2" data-path="symbols.html">
+        <li class="chapter " data-level="1.4.2" data-path="symbols.html">
             
                 <a href="symbols.html">
             
@@ -376,7 +376,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6" data-path="declaration-merging.html">
+        <li class="chapter active" data-level="1.4.6" data-path="declaration-merging.html">
             
                 <a href="declaration-merging.html">
             
@@ -450,7 +450,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Symbols</a>
+        <a href=".." >声明合并</a>
     </h1>
 </div>
 
@@ -465,36 +465,68 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#symbols"><b></b>Symbols</a></li></ul></div><a href="#symbols" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="symbols"><a name="symbols" class="anchor-navigation-ex-anchor" href="#symbols"><i class="fa fa-link" aria-hidden="true"></i></a><a name="symbols" class="plugin-anchor" href="#symbols"><i class="fa fa-link" aria-hidden="true"></i></a>Symbols</h1>
-<p>&#x81EA;ECMAScript 2015&#x8D77;&#xFF0C;symbol&#x6210;&#x4E3A;&#x4E86;&#x4E00;&#x79CD;&#x65B0;&#x7684;&#x539F;&#x751F;&#x7C7B;&#x578B;&#xFF0C;&#x5C31;&#x50CF;number&#x548C;string&#x4E00;&#x6837;&#x3002;
-symbol&#x7C7B;&#x578B;&#x7684;&#x503C;&#x662F;&#x901A;&#x8FC7;Symbol&#x6784;&#x9020;&#x51FD;&#x6570;&#x521B;&#x5EFA;&#x7684;&#x3002;</p>
-<pre><code>let sym1 = Symbol();
-let sym2 = Symbol(&quot;key&quot;); // &#x53EF;&#x9009;&#x7684;&#x5B57;&#x7B26;&#x4E32;key
-</code></pre><p>Symbols&#x662F;&#x4E0D;&#x53EF;&#x6539;&#x53D8;&#x4E14;&#x552F;&#x4E00;&#x7684;&#x3002;</p>
-<pre><code>let sym2 = Symbol(&quot;key&quot;)
-let sym3 = Symbol(&quot;key&quot;)
-
-sym2 === sym3 // false, symbols&#x662F;&#x552F;&#x4E00;&#x7684;
-</code></pre><p>&#x50CF;&#x5B57;&#x7B26;&#x4E32;&#x4E00;&#x6837;&#xFF0C;symbols&#x4E5F;&#x53EF;&#x4EE5;&#x88AB;&#x7528;&#x505A;&#x5BF9;&#x8C61;&#x5C5E;&#x6027;&#x7684;&#x952E;&#x3002;</p>
-<pre><code>let sym = Symbol()
-
-let obj = {
-  [sym]: &quot;value&quot;
-}
-
-console.log(obj[sym]) // &quot;value&quot;
-</code></pre><p>Symbols&#x4E5F;&#x53EF;&#x4EE5;&#x4E0E;&#x8BA1;&#x7B97;&#x51FA;&#x7684;&#x5C5E;&#x6027;&#x540D;&#x58F0;&#x660E;&#x76F8;&#x7ED3;&#x5408;&#x6765;&#x58F0;&#x660E;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#x548C;&#x7C7B;&#x6210;&#x5458;&#x3002;</p>
-<pre><code>const getClassNameSymbol = Symbol()
-
-class C {
-  [getClassNameSymbol](){
-    return &quot;C&quot;
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x58F0;&#x660E;&#x5408;&#x5E76;"><b></b>&#x58F0;&#x660E;&#x5408;&#x5E76;</a></li><ul><li><span class="title-icon "></span><a href="#&#x51FD;&#x6570;&#x7684;&#x5408;&#x5E76;"><b></b>&#x51FD;&#x6570;&#x7684;&#x5408;&#x5E76;</a></li><li><span class="title-icon "></span><a href="#&#x63A5;&#x53E3;&#x7684;&#x5408;&#x5E76;"><b></b>&#x63A5;&#x53E3;&#x7684;&#x5408;&#x5E76;</a></li><li><span class="title-icon "></span><a href="#&#x7C7B;&#x7684;&#x5408;&#x5E76;"><b></b>&#x7C7B;&#x7684;&#x5408;&#x5E76;</a></li></ul></ul></div><a href="#&#x58F0;&#x660E;&#x5408;&#x5E76;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x58F0;&#x660E;&#x5408;&#x5E76;"><a name="&#x58F0;&#x660E;&#x5408;&#x5E76;" class="anchor-navigation-ex-anchor" href="#&#x58F0;&#x660E;&#x5408;&#x5E76;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x58F0;&#x660E;&#x5408;&#x5E76;" class="plugin-anchor" href="#&#x58F0;&#x660E;&#x5408;&#x5E76;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x58F0;&#x660E;&#x5408;&#x5E76;</h1>
+<p>&#x5982;&#x679C;&#x5B9A;&#x4E49;&#x4E86;&#x4E24;&#x4E2A;&#x76F8;&#x540C;&#x540D;&#x5B57;&#x7684;&#x51FD;&#x6570;&#x3001;&#x63A5;&#x53E3;&#x6216;&#x7C7B;&#xFF0C;&#x90A3;&#x4E48;&#x5B83;&#x4EEC;&#x4F1A;&#x5408;&#x5E76;&#x6210;&#x4E00;&#x4E2A;&#x7C7B;&#x578B;&#xFF1A;</p>
+<h2 id="&#x51FD;&#x6570;&#x7684;&#x5408;&#x5E76;"><a name="&#x51FD;&#x6570;&#x7684;&#x5408;&#x5E76;" class="anchor-navigation-ex-anchor" href="#&#x51FD;&#x6570;&#x7684;&#x5408;&#x5E76;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x51FD;&#x6570;&#x7684;&#x5408;&#x5E76;" class="plugin-anchor" href="#&#x51FD;&#x6570;&#x7684;&#x5408;&#x5E76;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x51FD;&#x6570;&#x7684;&#x5408;&#x5E76;</h2>
+<p>&#x4E4B;&#x524D;&#x5B66;&#x4E60;&#x8FC7;&#x91CD;&#x8F7D;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x91CD;&#x8F7D;&#x5B9A;&#x4E49;&#x591A;&#x4E2A;&#x51FD;&#x6570;&#x7C7B;&#x578B;&#xFF1A;</p>
+<pre><code>function reverse(x: number): number
+function reverse(x: string): string
+function reverse(x: number | string): number | string {
+  if (typeof x === &apos;number&apos;) {
+    return Number(x.toString().split(&apos;&apos;).reverse().join(&apos;&apos;))
+  } else if (typeof x === &apos;string&apos;) {
+    return x.split(&apos;&apos;).reverse().join(&apos;&apos;)
   }
 }
+</code></pre><h2 id="&#x63A5;&#x53E3;&#x7684;&#x5408;&#x5E76;"><a name="&#x63A5;&#x53E3;&#x7684;&#x5408;&#x5E76;" class="anchor-navigation-ex-anchor" href="#&#x63A5;&#x53E3;&#x7684;&#x5408;&#x5E76;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x63A5;&#x53E3;&#x7684;&#x5408;&#x5E76;" class="plugin-anchor" href="#&#x63A5;&#x53E3;&#x7684;&#x5408;&#x5E76;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x63A5;&#x53E3;&#x7684;&#x5408;&#x5E76;</h2>
+<p>&#x63A5;&#x53E3;&#x4E2D;&#x7684;&#x5C5E;&#x6027;&#x5728;&#x5408;&#x5E76;&#x65F6;&#x4F1A;&#x7B80;&#x5355;&#x7684;&#x5408;&#x5E76;&#x5230;&#x4E00;&#x4E2A;&#x63A5;&#x53E3;&#x4E2D;&#xFF1A;</p>
+<pre><code>interface Alarm {
+  price: number
+}
+interface Alarm {
+  weight: number
+}
+</code></pre><p>&#x76F8;&#x5F53;&#x4E8E;&#xFF1A;</p>
+<pre><code>interface Alarm {
+  price: number
+  weight: number
+}
+</code></pre><p>&#x6CE8;&#x610F;&#xFF0C;<strong>&#x5408;&#x5E76;&#x7684;&#x5C5E;&#x6027;&#x7684;&#x7C7B;&#x578B;&#x5FC5;&#x987B;&#x662F;&#x552F;&#x4E00;&#x7684;</strong>&#xFF1A;</p>
+<pre><code>interface Alarm {
+  price: number
+}
+interface Alarm {
+  price: number  // &#x867D;&#x7136;&#x91CD;&#x590D;&#x4E86;&#xFF0C;&#x4F46;&#x662F;&#x7C7B;&#x578B;&#x90FD;&#x662F; `number`&#xFF0C;&#x6240;&#x4EE5;&#x4E0D;&#x4F1A;&#x62A5;&#x9519;
+  weight: number
+}
+</code></pre><pre><code>interface Alarm {
+  price: number
+}
+interface Alarm {
+  price: string  // &#x7C7B;&#x578B;&#x4E0D;&#x4E00;&#x81F4;&#xFF0C;&#x4F1A;&#x62A5;&#x9519;
+  weight: number
+}
 
-let c = new C()
-let className = c[getClassNameSymbol]() // &quot;C&quot;
-</code></pre>
+// index.ts(5,3): error TS2403: Subsequent variable declarations must have the same type.  Variable &apos;price&apos; must be of type &apos;number&apos;, but here has type &apos;string&apos;.
+</code></pre><p>&#x63A5;&#x53E3;&#x4E2D;&#x65B9;&#x6CD5;&#x7684;&#x5408;&#x5E76;&#xFF0C;&#x4E0E;&#x51FD;&#x6570;&#x7684;&#x5408;&#x5E76;&#x4E00;&#x6837;&#xFF1A;</p>
+<pre><code>interface Alarm {
+  price: number
+  alert(s: string): string
+}
+interface Alarm {
+  weight: number
+  alert(s: string, n: number): string
+}
+</code></pre><p>&#x76F8;&#x5F53;&#x4E8E;&#xFF1A;</p>
+<pre><code>interface Alarm {
+  price: number
+  weight: number
+  alert(s: string): string
+  alert(s: string, n: number): string
+}
+</code></pre><h2 id="&#x7C7B;&#x7684;&#x5408;&#x5E76;"><a name="&#x7C7B;&#x7684;&#x5408;&#x5E76;" class="anchor-navigation-ex-anchor" href="#&#x7C7B;&#x7684;&#x5408;&#x5E76;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x7C7B;&#x7684;&#x5408;&#x5E76;" class="plugin-anchor" href="#&#x7C7B;&#x7684;&#x5408;&#x5E76;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7C7B;&#x7684;&#x5408;&#x5E76;</h2>
+<p>&#x7C7B;&#x7684;&#x5408;&#x5E76;&#x4E0E;&#x63A5;&#x53E3;&#x7684;&#x5408;&#x5E76;&#x89C4;&#x5219;&#x4E00;&#x81F4;&#x3002;</p>
+
                                 
                                 </section>
                             
@@ -521,12 +553,12 @@ let className = c[getClassNameSymbol]() // &quot;C&quot;
 
             
                 
-                <a href="basic-types.html" class="navigation navigation-prev " aria-label="Previous page: 基础类型-高级">
+                <a href="declaration-files.html" class="navigation navigation-prev " aria-label="Previous page: 声明文件">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="iterators-and-generators.html" class="navigation navigation-next " aria-label="Next page: 迭代器和生成器">
+                <a href="variable-declarations.html" class="navigation navigation-next " aria-label="Next page: 变量声明">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -537,7 +569,7 @@ let className = c[getClassNameSymbol]() // &quot;C&quot;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Symbols","level":"1.4.2","depth":2,"next":{"title":"迭代器和生成器","level":"1.4.3","depth":2,"path":"advanced/iterators-and-generators.md","ref":"advanced/iterators-and-generators.md","articles":[]},"previous":{"title":"基础类型-高级","level":"1.4.1","depth":2,"path":"advanced/basic-types.md","ref":"advanced/basic-types.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","expandable-chapters-small","anchors","github","github-buttons","donate","sharing-plus","anchor-navigation-ex","favicon"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"github":{"url":"https://github.com/lurongtao/felixbooks-typescript"},"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"./source/images/donate.png","alipayText":" ","button":"赞赏","title":"","wechat":"","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"./source/images/favicon.jpg","bookmark":"./source/images/favicon.jpg","appleTouch":"./source/images/apple-touch-icon.jpg","appleTouchMore":{"120x120":"./source/images/apple-touch-icon.jpg","180x180":"./source/images/apple-touch-icon.jpg"}},"github-buttons":{"buttons":[{"user":"lurongtao","repo":"felixbooks-typescript","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"sharing":{"qq":false,"all":["google","facebook","weibo","twitter","qq","qzone","linkedin","pocket"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"古艺散人","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"千锋大前端小册-TypeScript","language":"zh-hans","links":{},"gitbook":"3.2.3","description":"TypeScript 入门教程"},"file":{"path":"advanced/symbols.md","mtime":"2020-02-10T12:23:12.461Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-12T01:02:16.250Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"声明合并","level":"1.4.6","depth":2,"next":{"title":"变量声明","level":"1.4.7","depth":2,"path":"advanced/variable-declarations.md","ref":"advanced/variable-declarations.md","articles":[]},"previous":{"title":"声明文件","level":"1.4.5","depth":2,"path":"advanced/declaration-files.md","ref":"advanced/declaration-files.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","expandable-chapters-small","anchors","github","github-buttons","donate","sharing-plus","anchor-navigation-ex","favicon"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"github":{"url":"https://github.com/lurongtao/felixbooks-typescript"},"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"./source/images/donate.png","alipayText":" ","button":"赞赏","title":"","wechat":"","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"./source/images/favicon.jpg","bookmark":"./source/images/favicon.jpg","appleTouch":"./source/images/apple-touch-icon.jpg","appleTouchMore":{"120x120":"./source/images/apple-touch-icon.jpg","180x180":"./source/images/apple-touch-icon.jpg"}},"github-buttons":{"buttons":[{"user":"lurongtao","repo":"felixbooks-typescript","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"sharing":{"qq":false,"all":["google","facebook","weibo","twitter","qq","qzone","linkedin","pocket"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"古艺散人","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"千锋大前端小册-TypeScript","language":"zh-hans","links":{},"gitbook":"3.2.3","description":"TypeScript 入门教程"},"file":{"path":"advanced/declaration-merging.md","mtime":"2020-02-11T11:00:04.900Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-12T01:02:16.250Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
