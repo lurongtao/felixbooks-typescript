@@ -20,8 +20,8 @@
   - [Symbols](advanced/symbols.md)
   - [迭代器和生成器](advanced/iterators-and-generators.md)
   - [装饰器](advanced/decorators.md)
+  - [声明文件](advanced/declaration-files.md)
+  - [声明合并](advanced/declaration-merging.md)
   - [变量声明](advanced/variable-declarations.md)
-
-- [声明文件](engineering/README.md)
 
 - [感谢](thanks/README.md)

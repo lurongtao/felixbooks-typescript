@@ -472,7 +472,7 @@ jQuery('#foo');
 jQuery.ajax('/api/get_something');
 ```
 
-关于声明合并的更多用法，可以查看[声明合并](../advanced/declaration-merging.md)章节。
+关于声明合并的更多用法，可以查看[声明合并](./declaration-merging.md)章节。
 
 ### npm 包
 

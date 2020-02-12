@@ -42,16 +42,16 @@ class Person {
 2、"strict": false
 
 * 使用类的装饰器扩展类的属性和方法
+interface Class {
+  new(...args: any[]): {}
+}
 
-```
-function desc(target) {
-  console.log(target)
-  return class extends target {
-    name = 'Felixlu'
-    age = 18
+function desc<T extends Class>(Target: T) {
+  console.log(Target)
+  return class extends Target {
     gender = '男'
     say() {
-      console.log(this.name, this.age, this.gender)
+      console.log(this.gender)
     }
   }
 }
